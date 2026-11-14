@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:,">
+<title>修仲 配信リンク集【非公式】ファンまとめ</title>
+<style>
+:root{
+--bg:#fbfefb; --bg-tint:#eefaf2; --surface:#ffffff; --ink:#22332b; --ink2:#4d6156; --ink3:#84978b;
+--line:#d9ecdf; --line2:#e8f4ec;
+--accent:#00917a; --accent-deep:#00755f; --accent-ink:#ffffff; --accent-soft:#dcf5ea;
+--leaf:#8fd6ae; --sky:#a9dcef; --sparkle:#ffc94d;
+--chip:#eff8f1; --btn:#22332b; --btn-ink:#fbfefb;
+color-scheme:light dark;
+}
+@media (prefers-color-scheme: dark){
+:root{
+--bg:#101a15; --bg-tint:#0d1712; --surface:#182420; --ink:#e9f4ec; --ink2:#b3c8b9; --ink3:#7e9484;
+--line:#2a3d32; --line2:#223129;
+--accent:#3ecfae; --accent-deep:#3ecfae; --accent-ink:#0d1712; --accent-soft:#1c332a;
+--leaf:#5da87f; --sky:#4d84a0; --sparkle:#e8b64c;
+--chip:#1e2f26; --btn:#e9f4ec; --btn-ink:#101a15;
+}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:linear-gradient(180deg,var(--bg-tint) 0,var(--bg) 340px);background-color:var(--bg);color:var(--ink);font-family:"Hiragino Maru Gothic ProN","Hiragino Maru Gothic Pro","Hiragino Sans","Yu Gothic",YuGothic,-apple-system,BlinkMacSystemFont,"Noto Sans JP",sans-serif;font-size:15px;line-height:1.65}
+a{color:inherit}
+button{font:inherit;cursor:pointer;min-height:40px}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px 72px}
+/* header */
+header{padding:38px 0 8px;border-top:6px solid transparent;border-image:linear-gradient(90deg,var(--accent),var(--leaf) 55%,var(--sky)) 1;position:relative}
+header::after{content:"✦";position:absolute;top:34px;right:6px;color:var(--sparkle);font-size:15px}
+.eng{font-size:12px;letter-spacing:.14em;color:var(--accent-deep);margin:0 0 14px;font-weight:700}
+h1{font-weight:800;font-size:30px;line-height:1.35;margin:0 0 12px;letter-spacing:.02em}
+h1 span.small{display:block;font-size:19px;margin-top:6px;color:var(--ink)}
+.lead{color:var(--ink2);font-size:14px;margin:0;max-width:620px}
+.lead strong{color:var(--ink)}
+.lead .unofficial{display:inline-block;font-weight:800;font-size:15px;color:var(--accent-ink);background:var(--accent);padding:2px 10px;border-radius:8px;margin-right:8px;letter-spacing:.04em;vertical-align:baseline}
+.tagblock{margin:20px 0 4px;background:var(--chip);border-radius:14px;padding:8px 14px}
+.taglines{font-weight:700;font-size:14.5px;line-height:1.55}
+.tagline{display:flex;align-items:center;gap:10px;padding:6px 0}
+.tagline+.tagline{border-top:1px solid var(--line2)}
+.tagline span{flex:1;min-width:0;overflow-wrap:anywhere}
+.tagline button.mini{flex:none;width:84px;margin-left:auto;background:var(--surface);text-align:center}
+/* 目次ジャンプボタン */
+.navrow{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+.navpill{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:0 16px;border:1.5px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);font-size:13.5px;font-weight:700;text-decoration:none}
+.navpill:hover{border-color:var(--accent);color:var(--accent-deep)}
+.navpill span.cnt{font-size:11.5px;font-weight:700;color:var(--accent-deep);background:var(--accent-soft);padding:2px 8px;border-radius:999px}
+/* sections */
+section{margin-top:44px;scroll-margin-top:24px}
+h2{font-size:21px;font-weight:800;margin:0 0 6px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+h2 span.n{font-size:12px;color:var(--accent-deep);letter-spacing:.08em;font-weight:700}
+.secnote{color:var(--ink2);font-size:13px;margin:0 0 18px}
+.noteline{color:var(--ink2);font-size:13px;margin:12px 0 0}
+/* updates — 小さくコンパクトな蓄積リスト（新しい記録は末尾に足す） */
+#sec-updates{margin-top:32px}
+#sec-updates p.secnote{font-size:12px;margin-bottom:10px}
+.updatelist{border-top:1px solid var(--line)}
+.upd{display:grid;grid-template-columns:92px minmax(0,1fr);gap:10px;align-items:baseline;padding:6px 2px;border-bottom:1px solid var(--line2);line-height:1.45}
+.upd time{font-size:11.5px;font-weight:700;color:var(--accent-deep);letter-spacing:.02em}
+.upd p{margin:0;font-size:12.5px;color:var(--ink2)}
+/* link rows */
+.linklist{border-top:1px solid var(--line)}
+.linkrow{display:grid;grid-template-columns:minmax(0,1fr) 116px;align-items:center;gap:4px 12px;padding:12px 2px;border-bottom:1px solid var(--line2)}
+.linkrow a.ttl,.linkrow span.ttl{font-size:16px;font-weight:600;text-decoration:none;border-bottom:1px solid var(--line);justify-self:start;min-height:44px;display:flex;align-items:center;overflow-wrap:anywhere}
+.linkrow a.ttl::after{content:" ↗";font-size:11px;color:var(--ink3);flex:none;margin-left:4px}
+.linkrow a.ttl:hover{border-color:var(--accent);color:var(--accent)}
+.linkrow span.url{grid-column:1;font-size:12px;color:var(--ink3);overflow-wrap:anywhere}
+.linkrow button.mini{grid-column:2;grid-row:1/span 2;width:116px;height:44px;text-align:center}
+.linkrow.program{background:var(--chip);border-radius:12px;padding-left:10px;padding-right:10px;margin-top:8px}
+.program a.ttl{font-weight:800}
+.plain span.ttl{border-bottom:none;cursor:default}
+.plain span.ttl:hover{color:inherit}
+.mini{height:40px;min-height:40px;padding:0 14px;font-size:13px;border:1px solid var(--line);background:var(--surface);border-radius:999px;color:var(--ink2)}
+.mini:hover{border-color:var(--ink3);color:var(--ink)}
+footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:var(--ink3);font-size:12.5px;line-height:1.8}
+/* キリ番掲示板タブ（ページ一番上） */
+.counterbar{display:flex;align-items:flex-end;gap:10px 16px;flex-wrap:wrap;padding:16px 2px 0}
+.kiritab{margin-left:auto;display:inline-flex;align-items:center;min-height:38px;padding:2px 18px 0;background:var(--accent-soft);border:1.5px solid var(--line);border-bottom:none;border-radius:12px 12px 0 0;color:var(--accent-deep);font-size:13.5px;font-weight:800;text-decoration:none}
+.kiritab:hover{color:var(--accent)}
+/* キリ番掲示板 */
+#kiriban h3{font-size:16.5px;font-weight:800;margin:24px 0 10px}
+.formbtn{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:14px;text-decoration:none}
+.formbtn:hover{background:var(--accent-deep);color:var(--accent-ink)}
+.getterlist{border-top:1px solid var(--line)}
+.getter{margin:0;padding:10px 2px;border-bottom:1px solid var(--line2);font-size:13.5px;color:var(--ink2)}
+/* toast */
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,16px);background:var(--ink);color:var(--bg);font-size:14px;font-weight:600;padding:12px 20px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity 0.18s,transform 0.18s;z-index:50;box-shadow:0 8px 28px rgba(0,0,0,0.22)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media (max-width:560px){
+body{font-size:15.5px}
+h1{font-size:25px} h1 span.small{font-size:16px}
+header{padding-top:32px}
+.wrap{padding:0 16px 64px}
+.linkrow{grid-template-columns:minmax(0,1fr) 108px;column-gap:10px}
+.linkrow button.mini{width:108px}
+}
+@media (max-width:340px){
+.linkrow{grid-template-columns:minmax(0,1fr) 100px}
+.linkrow button.mini{width:100px}
+.upd{grid-template-columns:84px minmax(0,1fr);gap:8px}
+}
+@media (prefers-reduced-motion: reduce){.toast{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="counterbar">
+<a class="kiritab" href="#kiriban">キリ番掲示板</a>
+</div>
+<header>
+<p class="eng">#SchoolTrip</p>
+<h1>🚌💨 修仲 配信リンク集【非公式】ファンまとめ<span class="small">『修学旅行で仲良くないグループに入りました』</span></h1>
+<p class="lead"><strong class="unofficial">【非公式】</strong>ファンが個人でまとめた配信リンク集です。タイトルをタップすると配信ページが開きます（2026-11-11〜13確認）。</p>
+<nav class="navrow" aria-label="目次">
+<a class="navpill" href="#sec-tver2">TVer シーズン2<span class="cnt">10</span></a>
+<a class="navpill" href="#sec-tver1">TVer シーズン1</a>
+<a class="navpill" href="#sec-fod1">FOD シーズン1<span class="cnt">14</span></a>
+<a class="navpill" href="#sec-fod2">FOD シーズン2<span class="cnt">6</span></a>
+<a class="navpill" href="#sec-abema">ABEMA<span class="cnt">13</span></a>
+<a class="navpill" href="#sec-unext">U-NEXT<span class="cnt">11</span></a>
+<a class="navpill" href="#sec-hulu">Hulu<span class="cnt">12</span></a>
+<a class="navpill" href="#sec-prime">Prime Video<span class="cnt">2</span></a>
+<a class="navpill" href="#sec-gaga">GagaOOLala<span class="cnt">18</span></a>
+<a class="navpill" href="#sec-heavenly">Heavenly<span class="cnt">1</span></a>
+<a class="navpill" href="#sec-viki">Rakuten Viki<span class="cnt">2</span></a>
+<a class="navpill" href="#sec-original">原作<span class="cnt">5</span></a>
+</nav>
+<div class="tagblock" aria-label="このドラマのハッシュタグ">
+<div class="taglines">
+<div class="tagline"><span>#ドラマ修学旅行</span><button class="mini" type="button" data-copy="#ドラマ修学旅行">コピー</button></div>
+<div class="tagline"><span>#修学旅行で仲良くないグループに入りました</span><button class="mini" type="button" data-copy="#修学旅行で仲良くないグループに入りました">コピー</button></div>
+<div class="tagline"><span>#SchoolTripJoinedAGroupImNotCloseTo</span><button class="mini" type="button" data-copy="#SchoolTripJoinedAGroupImNotCloseTo">コピー</button></div>
+<div class="tagline"><span>#สี่จตุรเทพมาทายทักพร้อมหอบรักมาทักทาย</span><button class="mini" type="button" data-copy="#สี่จตุรเทพมาทายทักพร้อมหอบรักมาทักทาย">コピー</button></div>
+<div class="tagline"><span>#我在學校旅行中被分到了一個糟糕的小組</span><button class="mini" type="button" data-copy="#我在學校旅行中被分到了一個糟糕的小組">コピー</button></div>
+<div class="tagline"><span>#修学旅行时被分进了合不来的组</span><button class="mini" type="button" data-copy="#修学旅行时被分进了合不来的组">コピー</button></div>
+<div class="tagline"><span>#수학여행에서친하지않은그룹에들어갔습니다</span><button class="mini" type="button" data-copy="#수학여행에서친하지않은그룹에들어갔습니다">コピー</button></div>
+</div>
+</div>
+</header>
+
+<section id="sec-tver2">
+<h2><span class="n">🚌💨</span>TVer シーズン2（見逃し配信）</h2>
+<p class="secnote">番組ページと各話・関連動画へのリンクです。</p>
+<div class="linklist">
+<div class="linkrow program">
+<a class="ttl" href="https://tver.jp/series/sr1es6void" target="_blank" rel="noopener">番組ページ</a>
+<span class="url">tver.jp/series/sr1es6void</span>
+<button class="mini" type="button" data-copy="https://tver.jp/series/sr1es6void">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://tver.jp/episodes/eps6p8s695" target="_blank" rel="noopener">第1話「平凡男子、人生初彼氏に悩む」</a>
+<span class="url">tver.jp/episodes/eps6p8s695</span>
+<button class="mini" type="button" data-copy="https://tver.jp/episodes/eps6p8s695">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://tver.jp/episodes/epgosripe4" target="_blank" rel="noopener">第2話「恋人と過ごす誕生日」</a>
+<span class="url">tver.jp/episodes/epgosripe4</span>
+<button class="mini" type="button" data-copy="https://tver.jp/episodes/epgosripe4">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://tver.jp/episodes/ep5ldlmq2u" target="_blank" rel="noopener">第3話「知らない過去の恋」</a>
+<span class="url">tver.jp/episodes/ep5ldlmq2u</span>
+<button class="mini" type="button" data-copy="https://tver.jp/episodes/ep5ldlmq2u">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://tver.jp/episodes/eprc8w84r3" target="_blank" rel="noopener">第4話「彼氏の家で作戦会議！？」</a>
+<span class="url">tver.jp/episodes/eprc8w84r3</span>
+<button class="mini" type="button" data-copy="https://tver.jp/episodes/eprc8w84r3">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://tver.jp/episodes/epd6dq9h2y" target="_blank" rel="noopener">関連「20分でわかるシーズン1ダイジェスト」</a>
+<span class="url">tver.jp/episodes/epd6dq9h2y</span>
+<button class="mini" type="button" data-copy="https://tver.jp/episodes/epd6dq9h2y">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://tver.jp/episodes/epr6r5qizq" target="_blank" rel="noopener">関連「10分でわかるドラマ修学旅行2前半戦」</a>
+<span class="url">tver.jp/episodes/epr6r5qizq</span>
+<button class="mini" type="button" data-copy="https://tver.jp/episodes/epr6r5qizq">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://tver.jp/episodes/epphqin7ja" target="_blank" rel="noopener">スペシャルインタビュー</a>
+<span class="url">tver.jp/episodes/epphqin7ja</span>
+<button class="mini" type="button" data-copy="https://tver.jp/episodes/epphqin7ja">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://tver.jp/episodes/ep1qeymm7n" target="_blank" rel="noopener">5分でわかる勉強合宿1日目</a>
+<span class="url">tver.jp/episodes/ep1qeymm7n</span>
+<button class="mini" type="button" data-copy="https://tver.jp/episodes/ep1qeymm7n">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://tver.jp/episodes/epahpezrhj" target="_blank" rel="noopener">徹底ガイド</a>
+<span class="url">tver.jp/episodes/epahpezrhj</span>
+<button class="mini" type="button" data-copy="https://tver.jp/episodes/epahpezrhj">URLコピー</button>
+</div>
+</div>
+<p class="noteline">（スペシャル3件は2026-11-11、友達からの連絡で追加）</p>
+</section>
+
+<section id="sec-tver1">
+<h2><span class="n">🚌💨</span>TVer シーズン1</h2>
+<p class="secnote">番組ページは未確認（2026-11-11、TVer内検索でシーズン1のシリーズは出てこなかった。配信終了済みの可能性）</p>
+</section>
+
+<section id="sec-fod1">
+<h2><span class="n">🚌💨</span>FOD シーズン1（独占見放題）</h2>
+<p class="secnote">番組ページと全話へのリンクです。</p>
+<div class="linklist">
+<div class="linkrow program">
+<a class="ttl" href="https://fod.fujitv.co.jp/title/10dk" target="_blank" rel="noopener">番組ページ</a>
+<span class="url">fod.fujitv.co.jp/title/10dk</span>
+<button class="mini" type="button" data-copy="https://fod.fujitv.co.jp/title/10dk">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://fod.fujitv.co.jp/title/10dk/10dk110001/" target="_blank" rel="noopener">第1話「平凡男子、一軍スター高校生に捕まる」</a>
+<span class="url">fod.fujitv.co.jp/title/10dk/10dk110001/</span>
+<button class="mini" type="button" data-copy="https://fod.fujitv.co.jp/title/10dk/10dk110001/">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://fod.fujitv.co.jp/title/10dk/10dk110002/" target="_blank" rel="noopener">第2話「波乱！遊園地で追いつめられる」</a>
+<span class="url">fod.fujitv.co.jp/title/10dk/10dk110002/</span>
+<button class="mini" type="button" data-copy="https://fod.fujitv.co.jp/title/10dk/10dk110002/">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://fod.fujitv.co.jp/title/10dk/10dk110003/" target="_blank" rel="noopener">第3話「同じベッドで過ごす夜」</a>
+<span class="url">fod.fujitv.co.jp/title/10dk/10dk110003/</span>
+<button class="mini" type="button" data-copy="https://fod.fujitv.co.jp/title/10dk/10dk110003/">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://fod.fujitv.co.jp/title/10dk/10dk110004/" target="_blank" rel="noopener">第4話「最終日。一軍男子、決意の告白」</a>
+<span class="url">fod.fujitv.co.jp/title/10dk/10dk110004/</span>
+<button class="mini" type="button" data-copy="https://fod.fujitv.co.jp/title/10dk/10dk110004/">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://fod.fujitv.co.jp/title/10dk/10dk110005/" target="_blank" rel="noopener">第5話「学校で見せないで！止まらない嫉妬心」</a>
+<span class="url">fod.fujitv.co.jp/title/10dk/10dk110005/</span>
+<button class="mini" type="button" data-copy="https://fod.fujitv.co.jp/title/10dk/10dk110005/">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://fod.fujitv.co.jp/title/10dk/10dk110006/" target="_blank" rel="noopener">第6話「夏の海、想いが溢れる」</a>
+<span class="url">fod.fujitv.co.jp/title/10dk/10dk110006/</span>
+<button class="mini" type="button" data-copy="https://fod.fujitv.co.jp/title/10dk/10dk110006/">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://fod.fujitv.co.jp/title/10dk/10dk110007/" target="_blank" rel="noopener">第7話「気になる子と同じグループになった」</a>
+<span class="url">fod.fujitv.co.jp/title/10dk/10dk110007/</span>
+<button class="mini" type="button" data-copy="https://fod.fujitv.co.jp/title/10dk/10dk110007/">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://fod.fujitv.co.jp/title/10dk/10dk110008/" target="_blank" rel="noopener">第8話「泣いてさらけ出す恋心」</a>
+<span class="url">fod.fujitv.co.jp/title/10dk/10dk110008/</span>
+<button class="mini" type="button" data-copy="https://fod.fujitv.co.jp/title/10dk/10dk110008/">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://fod.fujitv.co.jp/title/10dk/10dk110009/" target="_blank" rel="noopener">第9話「文化祭、初恋に戸惑う」</a>
+<span class="url">fod.fujitv.co.jp/title/10dk/10dk110009/</span>
+<button class="mini" type="button" data-copy="https://fod.fujitv.co.jp/title/10dk/10dk110009/">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://fod.fujitv.co.jp/title/10dk/10dk110010/" target="_blank" rel="noopener">最終回「一生心に残り続けていく日々」</a>
+<span class="url">fod.fujitv.co.jp/title/10dk/10dk110010/</span>
+<button class="mini" type="button" data-copy="https://fod.fujitv.co.jp/title/10dk/10dk110010/">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://fod.fujitv.co.jp/title/10dk/10dk110011/" target="_blank" rel="noopener">アフターストーリー前編「息もできない」</a>
+<span class="url">fod.fujitv.co.jp/title/10dk/10dk110011/</span>
+<button class="mini" type="button" data-copy="https://fod.fujitv.co.jp/title/10dk/10dk110011/">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://fod.fujitv.co.jp/title/10dk/10dk110012/" target="_blank" rel="noopener">アフターストーリー後編「嵐の夜に」</a>
+<span class="url">fod.fujitv.co.jp/title/10dk/10dk110012/</span>
+<button class="mini" type="button" data-copy="https://fod.fujitv.co.jp/title/10dk/10dk110012/">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://fod.fujitv.co.jp/title/10dk/10dk110013/" target="_blank" rel="noopener">予告「30秒予告」</a>
+<span class="url">fod.fujitv.co.jp/title/10dk/10dk110013/</span>
+<button class="mini" type="button" data-copy="https://fod.fujitv.co.jp/title/10dk/10dk110013/">URLコピー</button>
+</div>
+</div>
+</section>
+
+<section id="sec-fod2">
+<h2><span class="n">🚌💨</span>FOD シーズン2（独占見放題）</h2>
+<p class="secnote">番組ページと各話へのリンクです。</p>
+<div class="linklist">
+<div class="linkrow program">
+<a class="ttl" href="https://fod.fujitv.co.jp/title/71ev" target="_blank" rel="noopener">番組ページ</a>
+<span class="url">fod.fujitv.co.jp/title/71ev</span>
+<button class="mini" type="button" data-copy="https://fod.fujitv.co.jp/title/71ev">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://fod.fujitv.co.jp/title/71ev/71ev110001/" target="_blank" rel="noopener">第1話「平凡男子、人生初彼氏に悩む」</a>
+<span class="url">fod.fujitv.co.jp/title/71ev/71ev110001/</span>
+<button class="mini" type="button" data-copy="https://fod.fujitv.co.jp/title/71ev/71ev110001/">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://fod.fujitv.co.jp/title/71ev/71ev110002/" target="_blank" rel="noopener">第2話「恋人と過ごす誕生日」</a>
+<span class="url">fod.fujitv.co.jp/title/71ev/71ev110002/</span>
+<button class="mini" type="button" data-copy="https://fod.fujitv.co.jp/title/71ev/71ev110002/">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://fod.fujitv.co.jp/title/71ev/71ev110003/" target="_blank" rel="noopener">第3話「知らない過去の恋」</a>
+<span class="url">fod.fujitv.co.jp/title/71ev/71ev110003/</span>
+<button class="mini" type="button" data-copy="https://fod.fujitv.co.jp/title/71ev/71ev110003/">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://fod.fujitv.co.jp/title/71ev/71ev110004/" target="_blank" rel="noopener">第4話「彼氏の家で作戦会議！？」</a>
+<span class="url">fod.fujitv.co.jp/title/71ev/71ev110004/</span>
+<button class="mini" type="button" data-copy="https://fod.fujitv.co.jp/title/71ev/71ev110004/">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://fod.fujitv.co.jp/title/71ev/71ev110013/" target="_blank" rel="noopener">予告「30秒予告」</a>
+<span class="url">fod.fujitv.co.jp/title/71ev/71ev110013/</span>
+<button class="mini" type="button" data-copy="https://fod.fujitv.co.jp/title/71ev/71ev110013/">URLコピー</button>
+</div>
+</div>
+<p class="noteline">※シーズン2のページにアフターストーリーは掲載なし（2026-11-11時点）</p>
+</section>
+
+
+
+<section id="sec-abema">
+<h2><span class="n">🚌💨</span>ABEMA シーズン2（見逃し配信）</h2>
+<p class="secnote">作品ページへのリンクです。放送後に配信されます。</p>
+<div class="linklist">
+<div class="linkrow program">
+<a class="ttl" href="https://abema.tv/video/title/871-627" target="_blank" rel="noopener">作品ページ（シーズン2）</a>
+<span class="url">abema.tv/video/title/871-627</span>
+<button class="mini" type="button" data-copy="https://abema.tv/video/title/871-627">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://abema.tv/video/episode/871-627_s2_p25693" target="_blank" rel="noopener">第1話 平凡男子、人生初彼氏に悩む</a>
+<span class="url">abema.tv/video/episode/871-627_s2_p25693</span>
+<button class="mini" type="button" data-copy="https://abema.tv/video/episode/871-627_s2_p25693">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://abema.tv/video/episode/871-627_s2_p25694" target="_blank" rel="noopener">第2話 恋人と過ごす誕生日</a>
+<span class="url">abema.tv/video/episode/871-627_s2_p25694</span>
+<button class="mini" type="button" data-copy="https://abema.tv/video/episode/871-627_s2_p25694">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://abema.tv/video/episode/871-627_s2_p25792" target="_blank" rel="noopener">第3話 知らない過去の恋</a>
+<span class="url">abema.tv/video/episode/871-627_s2_p25792</span>
+<button class="mini" type="button" data-copy="https://abema.tv/video/episode/871-627_s2_p25792">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://abema.tv/video/episode/871-627_s2_p25824" target="_blank" rel="noopener">第4話 彼氏の家で作戦会議！？</a>
+<span class="url">abema.tv/video/episode/871-627_s2_p25824</span>
+<button class="mini" type="button" data-copy="https://abema.tv/video/episode/871-627_s2_p25824">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://abema.tv/video/episode/871-627_s2_p25718" target="_blank" rel="noopener">5分でわかる勉強合宿1日目</a>
+<span class="url">abema.tv/video/episode/871-627_s2_p25718</span>
+<button class="mini" type="button" data-copy="https://abema.tv/video/episode/871-627_s2_p25718">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://abema.tv/video/episode/871-627_s2_p25793" target="_blank" rel="noopener">10分でわかるドラマ修学旅行2前半戦</a>
+<span class="url">abema.tv/video/episode/871-627_s2_p25793</span>
+<button class="mini" type="button" data-copy="https://abema.tv/video/episode/871-627_s2_p25793">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://abema.tv/video/episode/871-627_s2_p25626" target="_blank" rel="noopener">20分でわかるシーズン1ダイジェスト</a>
+<span class="url">abema.tv/video/episode/871-627_s2_p25626</span>
+<button class="mini" type="button" data-copy="https://abema.tv/video/episode/871-627_s2_p25626">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://abema.tv/video/episode/871-627_s2_p25627" target="_blank" rel="noopener">「修学旅行で仲良くないグループにはいりました2」徹底ガイド</a>
+<span class="url">abema.tv/video/episode/871-627_s2_p25627</span>
+<button class="mini" type="button" data-copy="https://abema.tv/video/episode/871-627_s2_p25627">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://abema.tv/video/episode/871-627_s2_p25481" target="_blank" rel="noopener">予告第1弾</a>
+<span class="url">abema.tv/video/episode/871-627_s2_p25481</span>
+<button class="mini" type="button" data-copy="https://abema.tv/video/episode/871-627_s2_p25481">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://abema.tv/video/episode/871-627_s2_p25482" target="_blank" rel="noopener">W主演 藤本洸大＆簡秀吉 スペシャルインタビュー</a>
+<span class="url">abema.tv/video/episode/871-627_s2_p25482</span>
+<button class="mini" type="button" data-copy="https://abema.tv/video/episode/871-627_s2_p25482">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://abema.tv/video/episode/871-627_s2_p25585" target="_blank" rel="noopener">予告第2弾</a>
+<span class="url">abema.tv/video/episode/871-627_s2_p25585</span>
+<button class="mini" type="button" data-copy="https://abema.tv/video/episode/871-627_s2_p25585">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://abema.tv/video/episode/871-627_s2_p25636" target="_blank" rel="noopener">予告第3弾</a>
+<span class="url">abema.tv/video/episode/871-627_s2_p25636</span>
+<button class="mini" type="button" data-copy="https://abema.tv/video/episode/871-627_s2_p25636">URLコピー</button>
+</div>
+</div>
+<p class="noteline">※シーズン1の作品ページは未確認（2026-11-13時点）</p>
+</section>
+
+<section id="sec-unext">
+<h2><span class="n">🚌💨</span>U-NEXT（シーズン1・見放題）</h2>
+<p class="secnote">全10話が見放題です。</p>
+<div class="linklist">
+<div class="linkrow">
+<a class="ttl" href="https://video.unext.jp/title/SID0317672" target="_blank" rel="noopener">シーズン1</a>
+<span class="url">video.unext.jp/title/SID0317672</span>
+<button class="mini" type="button" data-copy="https://video.unext.jp/title/SID0317672">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://video.unext.jp/play/SID0317672/ED00844181" target="_blank" rel="noopener">第1話「平凡男子、一軍スター高校生に捕まる」</a>
+<span class="url">video.unext.jp/play/SID0317672/ED00844181</span>
+<button class="mini" type="button" data-copy="https://video.unext.jp/play/SID0317672/ED00844181">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://video.unext.jp/play/SID0317672/ED00844182" target="_blank" rel="noopener">第2話「波乱！遊園地で追いつめられる」</a>
+<span class="url">video.unext.jp/play/SID0317672/ED00844182</span>
+<button class="mini" type="button" data-copy="https://video.unext.jp/play/SID0317672/ED00844182">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://video.unext.jp/episode/SID0317672/ED00844183" target="_blank" rel="noopener">第3話「同じベッドで過ごす夜」</a>
+<span class="url">video.unext.jp/episode/SID0317672/ED00844183</span>
+<button class="mini" type="button" data-copy="https://video.unext.jp/episode/SID0317672/ED00844183">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://video.unext.jp/episode/SID0317672/ED00844184" target="_blank" rel="noopener">第4話「最終日。一軍男子、決意の告白」</a>
+<span class="url">video.unext.jp/episode/SID0317672/ED00844184</span>
+<button class="mini" type="button" data-copy="https://video.unext.jp/episode/SID0317672/ED00844184">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://video.unext.jp/episode/SID0317672/ED00844185" target="_blank" rel="noopener">第5話「学校で見せないで！止まらない嫉妬心」</a>
+<span class="url">video.unext.jp/episode/SID0317672/ED00844185</span>
+<button class="mini" type="button" data-copy="https://video.unext.jp/episode/SID0317672/ED00844185">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://video.unext.jp/episode/SID0317672/ED00844186" target="_blank" rel="noopener">第6話「夏の海、想いが溢れる」</a>
+<span class="url">video.unext.jp/episode/SID0317672/ED00844186</span>
+<button class="mini" type="button" data-copy="https://video.unext.jp/episode/SID0317672/ED00844186">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://video.unext.jp/episode/SID0317672/ED00844187" target="_blank" rel="noopener">第7話「気になる子と同じグループになった」</a>
+<span class="url">video.unext.jp/episode/SID0317672/ED00844187</span>
+<button class="mini" type="button" data-copy="https://video.unext.jp/episode/SID0317672/ED00844187">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://video.unext.jp/episode/SID0317672/ED00844188" target="_blank" rel="noopener">第8話「泣いてさらけ出す恋心」</a>
+<span class="url">video.unext.jp/episode/SID0317672/ED00844188</span>
+<button class="mini" type="button" data-copy="https://video.unext.jp/episode/SID0317672/ED00844188">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://video.unext.jp/episode/SID0317672/ED00844189" target="_blank" rel="noopener">第9話「文化祭、初恋に戸惑う」</a>
+<span class="url">video.unext.jp/episode/SID0317672/ED00844189</span>
+<button class="mini" type="button" data-copy="https://video.unext.jp/episode/SID0317672/ED00844189">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://video.unext.jp/episode/SID0317672/ED00844190" target="_blank" rel="noopener">最終回「一生心に残り続けていく日々」</a>
+<span class="url">video.unext.jp/episode/SID0317672/ED00844190</span>
+<button class="mini" type="button" data-copy="https://video.unext.jp/episode/SID0317672/ED00844190">URLコピー</button>
+</div>
+</div>
+</section>
+
+<section id="sec-hulu">
+<h2><span class="n">🚌💨</span>Hulu（シーズン1・見放題）</h2>
+<p class="secnote">シーズン1が見放題です。</p>
+<div class="linklist">
+<div class="linkrow">
+<a class="ttl" href="https://www.hulu.jp/school-trip-joined-a-group-im-not-close-to" target="_blank" rel="noopener">シーズン1</a>
+<span class="url">hulu.jp/school-trip-joined-a-group-im-not-close-to</span>
+<button class="mini" type="button" data-copy="https://www.hulu.jp/school-trip-joined-a-group-im-not-close-to">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.hulu.jp/watch/100263932" target="_blank" rel="noopener">第1話「平凡男子、一軍スター高校生に捕まる」</a>
+<span class="url">hulu.jp/watch/100263932</span>
+<button class="mini" type="button" data-copy="https://www.hulu.jp/watch/100263932">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.hulu.jp/watch/100263933" target="_blank" rel="noopener">第2話「波乱！遊園地で追いつめられる」</a>
+<span class="url">hulu.jp/watch/100263933</span>
+<button class="mini" type="button" data-copy="https://www.hulu.jp/watch/100263933">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.hulu.jp/watch/100263934" target="_blank" rel="noopener">第3話「同じベッドで過ごす夜」</a>
+<span class="url">hulu.jp/watch/100263934</span>
+<button class="mini" type="button" data-copy="https://www.hulu.jp/watch/100263934">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.hulu.jp/watch/100263935" target="_blank" rel="noopener">第4話「最終日。一軍男子、決意の告白」</a>
+<span class="url">hulu.jp/watch/100263935</span>
+<button class="mini" type="button" data-copy="https://www.hulu.jp/watch/100263935">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.hulu.jp/watch/100263936" target="_blank" rel="noopener">第5話「学校で見せないで！止まらない嫉妬心」</a>
+<span class="url">hulu.jp/watch/100263936</span>
+<button class="mini" type="button" data-copy="https://www.hulu.jp/watch/100263936">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.hulu.jp/watch/100263937" target="_blank" rel="noopener">第6話「夏の海、想いが溢れる」</a>
+<span class="url">hulu.jp/watch/100263937</span>
+<button class="mini" type="button" data-copy="https://www.hulu.jp/watch/100263937">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.hulu.jp/watch/100263938" target="_blank" rel="noopener">第7話「気になる子と同じグループになった」</a>
+<span class="url">hulu.jp/watch/100263938</span>
+<button class="mini" type="button" data-copy="https://www.hulu.jp/watch/100263938">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.hulu.jp/watch/100263939" target="_blank" rel="noopener">第8話「泣いてさらけ出す恋心」</a>
+<span class="url">hulu.jp/watch/100263939</span>
+<button class="mini" type="button" data-copy="https://www.hulu.jp/watch/100263939">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.hulu.jp/watch/100263940" target="_blank" rel="noopener">第9話「文化祭、初恋に戸惑う」</a>
+<span class="url">hulu.jp/watch/100263940</span>
+<button class="mini" type="button" data-copy="https://www.hulu.jp/watch/100263940">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.hulu.jp/watch/100263941" target="_blank" rel="noopener">最終回「一生心に残り続けていく日々」</a>
+<span class="url">hulu.jp/watch/100263941</span>
+<button class="mini" type="button" data-copy="https://www.hulu.jp/watch/100263941">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.hulu.jp/watch/100264152" target="_blank" rel="noopener">予告編</a>
+<span class="url">hulu.jp/watch/100264152</span>
+<button class="mini" type="button" data-copy="https://www.hulu.jp/watch/100264152">URLコピー</button>
+</div>
+</div>
+</section>
+
+<section id="sec-prime">
+<h2><span class="n">🚌💨</span>Prime Video（FODチャンネル）</h2>
+<p class="secnote">FODチャンネル for Prime Videoの登録（月額1,320円）で視聴できます。</p>
+<div class="linklist">
+<div class="linkrow">
+<a class="ttl" href="https://www.primevideo.com/-/ja/region/fe/detail/0T6OBII21QKHWX64DCRVDJE6TC" target="_blank" rel="noopener">シーズン1</a>
+<span class="url">primevideo.com/-/ja/region/fe/detail/0T6OBII21QKHWX64DCRVDJE6TC</span>
+<button class="mini" type="button" data-copy="https://www.primevideo.com/-/ja/region/fe/detail/0T6OBII21QKHWX64DCRVDJE6TC">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.primevideo.com/-/ja/region/fe/detail/0L5HRF7KCJTDJ7Q8XPK0J19WUB" target="_blank" rel="noopener">シーズン2</a>
+<span class="url">primevideo.com/-/ja/region/fe/detail/0L5HRF7KCJTDJ7Q8XPK0J19WUB</span>
+<button class="mini" type="button" data-copy="https://www.primevideo.com/-/ja/region/fe/detail/0L5HRF7KCJTDJ7Q8XPK0J19WUB">URLコピー</button>
+</div>
+</div>
+</section>
+
+<section id="sec-gaga">
+<h2><span class="n">🚌💨</span>GagaOOLala（海外配信）</h2>
+<p class="secnote">確認できた話数ページへのリンクです（日本・韓国・香港・マカオを除く）。</p>
+<div class="linklist">
+<div class="linkrow">
+<a class="ttl" href="https://www.gagaoolala.com/en/videos/5924/school-trip-joined-a-group-im-not-close-to-2025" target="_blank" rel="noopener">シーズン1</a>
+<span class="url">gagaoolala.com/en/videos/5924/school-trip-joined-a-group-im-not-close-to-2025</span>
+<button class="mini" type="button" data-copy="https://www.gagaoolala.com/en/videos/5924/school-trip-joined-a-group-im-not-close-to-2025">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.gagaoolala.com/en/videos/5925/school-trip-joined-a-group-im-not-close-to-2025-s01e01" target="_blank" rel="noopener">シーズン1 第1話</a>
+<span class="url">gagaoolala.com/en/videos/5925/school-trip-joined-a-group-im-not-close-to-2025-s01e01</span>
+<button class="mini" type="button" data-copy="https://www.gagaoolala.com/en/videos/5925/school-trip-joined-a-group-im-not-close-to-2025-s01e01">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.gagaoolala.com/en/videos/5926/school-trip-joined-a-group-im-not-close-to-2025-s01e02" target="_blank" rel="noopener">シーズン1 第2話</a>
+<span class="url">gagaoolala.com/en/videos/5926/school-trip-joined-a-group-im-not-close-to-2025-s01e02</span>
+<button class="mini" type="button" data-copy="https://www.gagaoolala.com/en/videos/5926/school-trip-joined-a-group-im-not-close-to-2025-s01e02">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.gagaoolala.com/en/videos/5927/school-trip-joined-a-group-im-not-close-to-2025-s01e03" target="_blank" rel="noopener">シーズン1 第3話</a>
+<span class="url">gagaoolala.com/en/videos/5927/school-trip-joined-a-group-im-not-close-to-2025-s01e03</span>
+<button class="mini" type="button" data-copy="https://www.gagaoolala.com/en/videos/5927/school-trip-joined-a-group-im-not-close-to-2025-s01e03">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.gagaoolala.com/en/videos/5928/school-trip-joined-a-group-im-not-close-to-2025-s01e04" target="_blank" rel="noopener">シーズン1 第4話</a>
+<span class="url">gagaoolala.com/en/videos/5928/school-trip-joined-a-group-im-not-close-to-2025-s01e04</span>
+<button class="mini" type="button" data-copy="https://www.gagaoolala.com/en/videos/5928/school-trip-joined-a-group-im-not-close-to-2025-s01e04">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.gagaoolala.com/en/videos/5929/school-trip-joined-a-group-im-not-close-to-2025-s01e05" target="_blank" rel="noopener">シーズン1 第5話</a>
+<span class="url">gagaoolala.com/en/videos/5929/school-trip-joined-a-group-im-not-close-to-2025-s01e05</span>
+<button class="mini" type="button" data-copy="https://www.gagaoolala.com/en/videos/5929/school-trip-joined-a-group-im-not-close-to-2025-s01e05">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.gagaoolala.com/en/videos/5930/school-trip-joined-a-group-im-not-close-to-2025-s01e06" target="_blank" rel="noopener">シーズン1 第6話</a>
+<span class="url">gagaoolala.com/en/videos/5930/school-trip-joined-a-group-im-not-close-to-2025-s01e06</span>
+<button class="mini" type="button" data-copy="https://www.gagaoolala.com/en/videos/5930/school-trip-joined-a-group-im-not-close-to-2025-s01e06">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.gagaoolala.com/en/videos/5931/school-trip-joined-a-group-im-not-close-to-2025-s01e07" target="_blank" rel="noopener">シーズン1 第7話</a>
+<span class="url">gagaoolala.com/en/videos/5931/school-trip-joined-a-group-im-not-close-to-2025-s01e07</span>
+<button class="mini" type="button" data-copy="https://www.gagaoolala.com/en/videos/5931/school-trip-joined-a-group-im-not-close-to-2025-s01e07">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.gagaoolala.com/en/videos/5932/school-trip-joined-a-group-im-not-close-to-2025-s01e08" target="_blank" rel="noopener">シーズン1 第8話</a>
+<span class="url">gagaoolala.com/en/videos/5932/school-trip-joined-a-group-im-not-close-to-2025-s01e08</span>
+<button class="mini" type="button" data-copy="https://www.gagaoolala.com/en/videos/5932/school-trip-joined-a-group-im-not-close-to-2025-s01e08">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.gagaoolala.com/en/videos/5933/school-trip-joined-a-group-im-not-close-to-2025-s01e09" target="_blank" rel="noopener">シーズン1 第9話</a>
+<span class="url">gagaoolala.com/en/videos/5933/school-trip-joined-a-group-im-not-close-to-2025-s01e09</span>
+<button class="mini" type="button" data-copy="https://www.gagaoolala.com/en/videos/5933/school-trip-joined-a-group-im-not-close-to-2025-s01e09">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.gagaoolala.com/en/videos/5934/school-trip-joined-a-group-im-not-close-to-2025-s01e10" target="_blank" rel="noopener">シーズン1 第10話</a>
+<span class="url">gagaoolala.com/en/videos/5934/school-trip-joined-a-group-im-not-close-to-2025-s01e10</span>
+<button class="mini" type="button" data-copy="https://www.gagaoolala.com/en/videos/5934/school-trip-joined-a-group-im-not-close-to-2025-s01e10">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.gagaoolala.com/en/videos/6233/school-trip-joined-a-group-im-not-close-to-2025-s01e11" target="_blank" rel="noopener">アフターストーリー1</a>
+<span class="url">gagaoolala.com/en/videos/6233/school-trip-joined-a-group-im-not-close-to-2025-s01e11</span>
+<button class="mini" type="button" data-copy="https://www.gagaoolala.com/en/videos/6233/school-trip-joined-a-group-im-not-close-to-2025-s01e11">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.gagaoolala.com/en/videos/6234/school-trip-joined-a-group-im-not-close-to-2025-s01e12" target="_blank" rel="noopener">アフターストーリー2</a>
+<span class="url">gagaoolala.com/en/videos/6234/school-trip-joined-a-group-im-not-close-to-2025-s01e12</span>
+<button class="mini" type="button" data-copy="https://www.gagaoolala.com/en/videos/6234/school-trip-joined-a-group-im-not-close-to-2025-s01e12">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.gagaoolala.com/en/videos/9486/school-trip-joined-a-group-im-not-close-to-2025-s02e01" target="_blank" rel="noopener">シーズン2 第1話</a>
+<span class="url">gagaoolala.com/en/videos/9486/school-trip-joined-a-group-im-not-close-to-2025-s02e01</span>
+<button class="mini" type="button" data-copy="https://www.gagaoolala.com/en/videos/9486/school-trip-joined-a-group-im-not-close-to-2025-s02e01">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.gagaoolala.com/en/videos/9487/school-trip-joined-a-group-im-not-close-to-2025-s02e02" target="_blank" rel="noopener">シーズン2 第2話</a>
+<span class="url">gagaoolala.com/en/videos/9487/school-trip-joined-a-group-im-not-close-to-2025-s02e02</span>
+<button class="mini" type="button" data-copy="https://www.gagaoolala.com/en/videos/9487/school-trip-joined-a-group-im-not-close-to-2025-s02e02">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.gagaoolala.com/en/videos/9488/school-trip-joined-a-group-im-not-close-to-2025-s02e03" target="_blank" rel="noopener">シーズン2 第3話</a>
+<span class="url">gagaoolala.com/en/videos/9488/school-trip-joined-a-group-im-not-close-to-2025-s02e03</span>
+<button class="mini" type="button" data-copy="https://www.gagaoolala.com/en/videos/9488/school-trip-joined-a-group-im-not-close-to-2025-s02e03">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.gagaoolala.com/en/videos/9489/school-trip-joined-a-group-im-not-close-to-2025-s02e04" target="_blank" rel="noopener">シーズン2 第4話</a>
+<span class="url">gagaoolala.com/en/videos/9489/school-trip-joined-a-group-im-not-close-to-2025-s02e04</span>
+<button class="mini" type="button" data-copy="https://www.gagaoolala.com/en/videos/9489/school-trip-joined-a-group-im-not-close-to-2025-s02e04">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.gagaoolala.com/en/videos/9490/school-trip-joined-a-group-im-not-close-to-2025-s02e05" target="_blank" rel="noopener">シーズン2 第5話</a>
+<span class="url">gagaoolala.com/en/videos/9490/school-trip-joined-a-group-im-not-close-to-2025-s02e05</span>
+<button class="mini" type="button" data-copy="https://www.gagaoolala.com/en/videos/9490/school-trip-joined-a-group-im-not-close-to-2025-s02e05">URLコピー</button>
+</div>
+</div>
+</section>
+
+<section id="sec-heavenly">
+<h2><span class="n">🚌💨</span>Heavenly（海外配信）</h2>
+<p class="secnote">韓国向けの配信です。確認できた作品ページへのリンクです。</p>
+<div class="linklist">
+<div class="linkrow program">
+<a class="ttl" href="https://www.heavenly.tv/en/detail/1185/pretty-boy-x-ordinary-guy" target="_blank" rel="noopener">作品ページ（シーズン2）</a>
+<span class="url">heavenly.tv/en/detail/1185/pretty-boy-x-ordinary-guy</span>
+<button class="mini" type="button" data-copy="https://www.heavenly.tv/en/detail/1185/pretty-boy-x-ordinary-guy">URLコピー</button>
+</div>
+</div>
+</section>
+
+<section id="sec-viki">
+<h2><span class="n">🚌💨</span>Rakuten Viki（海外配信）</h2>
+<p class="secnote">確認できた作品ページへのリンクです。</p>
+<div class="linklist">
+<div class="linkrow">
+<a class="ttl" href="https://www.viki.com/tv/41622c-school-trip-joined-a-group-im-not-close-to" target="_blank" rel="noopener">シーズン1</a>
+<span class="url">viki.com/tv/41622c-school-trip-joined-a-group-im-not-close-to</span>
+<button class="mini" type="button" data-copy="https://www.viki.com/tv/41622c-school-trip-joined-a-group-im-not-close-to">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://www.viki.com/tv/41798c-school-trip-joined-a-group-im-not-close-to-2" target="_blank" rel="noopener">シーズン2</a>
+<span class="url">viki.com/tv/41798c-school-trip-joined-a-group-im-not-close-to-2</span>
+<button class="mini" type="button" data-copy="https://www.viki.com/tv/41798c-school-trip-joined-a-group-im-not-close-to-2">URLコピー</button>
+</div>
+</div>
+</section>
+
+<section id="sec-original">
+<h2><span class="n">🚌💨</span>原作（小説・コミック）</h2>
+<p class="secnote">原作の小説・コミックへのリンクです。</p>
+<div class="linklist">
+<div class="linkrow">
+<a class="ttl" href="https://www.pixiv.net/users/87118862/novels" target="_blank" rel="noopener">pixiv小説（隠木鶉）</a>
+<span class="url">pixiv.net/users/87118862/novels</span>
+<button class="mini" type="button" data-copy="https://www.pixiv.net/users/87118862/novels">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://novema.jp/book/n1734175" target="_blank" rel="noopener">ノベマ！原作小説（全話公開・登録なしで読める）</a>
+<span class="url">novema.jp/book/n1734175</span>
+<button class="mini" type="button" data-copy="https://novema.jp/book/n1734175">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://novema.jp/member/n1355993" target="_blank" rel="noopener">隠木鶉 会員ページ（ノベマ！）</a>
+<span class="url">novema.jp/member/n1355993</span>
+<button class="mini" type="button" data-copy="https://novema.jp/member/n1355993">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://comic.pixiv.net/works/12856" target="_blank" rel="noopener">pixivコミック（作画：こむぎ）</a>
+<span class="url">comic.pixiv.net/works/12856</span>
+<button class="mini" type="button" data-copy="https://comic.pixiv.net/works/12856">URLコピー</button>
+</div>
+<div class="linkrow">
+<a class="ttl" href="https://novema.jp/beluck" target="_blank" rel="noopener">BeLuck文庫（ノベマ！）</a>
+<span class="url">novema.jp/beluck</span>
+<button class="mini" type="button" data-copy="https://novema.jp/beluck">URLコピー</button>
+</div>
+<div class="linkrow plain">
+<span class="ttl">FODマンガ『修学旅行で仲良くないグループに入りました【単話版】』（1〜3話無料、FODアプリ内。ウェブのURLは未確認）</span>
+</div>
+</div>
+</section>
+
+<section id="sec-updates">
+<h2><span class="n">🚌💨</span>更新記録</h2>
+<div class="updatelist">
+<div class="upd"><time datetime="2026-11-12">2026-11-12</time><p>リンク集をまとめました</p></div>
+<div class="upd"><time datetime="2026-11-13">2026-11-13</time><p>アドレスを新しいものに移しました</p></div>
+<div class="upd"><time datetime="2026-11-13">2026-11-13</time><p>ABEMAとGagaOOLalaを追加しました</p></div>
+<div class="upd"><time datetime="2026-11-13">2026-11-13</time><p>Heavenlyを追加しました</p></div>
+<div class="upd"><time datetime="2026-11-13">2026-11-13</time><p>韓国語タイトルのハッシュタグを追加しました</p></div>
+<div class="upd"><time datetime="2026-11-13">2026-11-13</time><p>中国語タイトルのハッシュタグを追加しました</p></div>
+<div class="upd"><time datetime="2026-11-13">2026-11-13</time><p>GagaOOLalaで使われているタグ #我在學校旅行中被分到了一個糟糕的小組 を追加しました</p></div>
+<div class="upd"><time datetime="2026-11-13">2026-11-13</time><p>タイ語タイトルのハッシュタグを追加しました</p></div>
+<div class="upd"><time datetime="2026-11-13">2026-11-13</time><p>ABEMAに各話と関連映像を追加しました</p></div>
+<div class="upd"><time datetime="2026-11-13">2026-11-13</time><p>GagaOOLalaシーズン2の第2話〜第5話と、Rakuten Viki（シーズン1・シーズン2）を追加しました</p></div>
+<div class="upd"><time datetime="2026-11-13">2026-11-13</time><p>U-NEXTとHulu（シーズン1）、Prime VideoのFODチャンネル（シーズン1・シーズン2）を追加しました</p></div>
+<div class="upd"><time datetime="2026-11-14">2026-11-14</time><p>Huluの各話リンク（第1話〜最終回・予告編）を追加しました</p></div>
+<div class="upd"><time datetime="2026-11-14">2026-11-14</time><p>U-NEXTの各話リンク（第1話〜最終回）を追加しました</p></div>
+<div class="upd"><time datetime="2026-11-14">2026-11-14</time><p>GagaOOLalaシーズン1の各話リンク（第1話〜第10話・アフターストーリー）を追加しました</p></div>
+</div>
+</section>
+
+<section id="kiriban">
+<h2><span class="n">🚌💨</span>キリ番掲示板</h2>
+<p class="secnote">0で終わる数、ゾロ目、連番（123など）、ミラ番（12321など）、ゴロ番（4649など）がキリ番です。</p>
+<p class="secnote">キリ番を踏んだら、報告フォームから知らせてください。</p>
+<p style="margin:14px 0 0"><a class="formbtn" href="https://docs.google.com/forms/d/e/1FAIpQLSeC8vScLoMx_Y_u488S9chWpaPmB-N7EpZAlJ1UFsi0mNmcYQ/viewform" target="_blank" rel="noopener">キリ番報告フォームを開く</a></p>
+<h3>キリ番ゲッター記録</h3>
+<div class="getterlist">
+<p class="getter">報告が届いたら、ここに数字とお名前を記録します。</p>
+</div>
+</section>
+
+</div>
+<div class="toast" id="toast" role="status">コピーしました</div>
+
+<script>
+var toast = document.getElementById("toast"), toastTimer = null;
+function showToast(msg){
+toast.textContent = msg || "コピーしました";
+toast.classList.add("show");
+clearTimeout(toastTimer);
+toastTimer = setTimeout(function(){ toast.classList.remove("show");}, 1800);
+}
+function copyText(text){
+function done(){ showToast("コピーしました");}
+if(navigator.clipboard && navigator.clipboard.writeText){
+navigator.clipboard.writeText(text).then(done).catch(function(){ fallback();});
+} else fallback();
+function fallback(){
+var ta = document.createElement("textarea");
+ta.value = text; ta.style.position="fixed"; ta.style.opacity="0";
+document.body.appendChild(ta); ta.select();
+try{ document.execCommand("copy"); done();}catch(e){ showToast("コピーできませんでした");}
+document.body.removeChild(ta);
+}
+}
+document.addEventListener("click", function(e){
+var b = e.target.closest("[data-copy]");
+if(b){ copyText(b.getAttribute("data-copy"));}
+});
+</script>
+<div id="shunaka-counter" style="text-align:center;padding:10px 0;font-size:15px;">あなたは <span id="shunaka-count">…</span> 人目の修学旅行生です</div>
+<script>
+fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/links')
+ .then(function(r){return r.json();})
+ .then(function(d){document.getElementById('shunaka-count').textContent=d.value;})
+ .catch(function(){document.getElementById('shunaka-count').textContent='?';});
+</script>
+</body>
+</html>
