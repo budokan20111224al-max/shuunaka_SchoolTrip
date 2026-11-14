@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>修仲ファンまとめ【非公式】</title>
+<style>
+body{margin:0;font-family:sans-serif;color:#333;background:#fff;padding:24px 28px 40px}
+a{color:#2f6f5e}
+h1{font-size:22px;margin:0 0 4px}
+.sub{font-size:13px;color:#666;margin-bottom:14px}
+.counter{background:#fdf6d8;border:1px solid #f2d06b;border-radius:6px;padding:8px 12px;font-size:15px;margin-bottom:6px}
+.kiriban{font-size:12px;color:#555;margin-bottom:20px}
+.info-head{text-align:center;font-weight:bold;margin-bottom:8px}
+.info{border-top:1px solid #40826d;padding:10px 0}
+.info .cat{font-weight:bold}
+.info .body{margin-left:24px;font-size:14px;line-height:1.8}
+.new{color:#d6336c;font-weight:bold}
+.note{border-top:1px solid #40826d;padding-top:12px;margin-top:4px;font-size:12px;line-height:1.8;color:#555}
+</style>
+</head>
+<body>
+<h1>🚌💨 修仲ファンまとめ【非公式】</h1>
+<div class="sub">『修学旅行で仲良くないグループに入りました』のファンまとめサイトです</div>
+
+<div class="counter">あなたは <span id="cnt">…</span> 人目の修学旅行生です</div>
+<div class="kiriban">キリ番（0で終わる数・ゾロ目・連番・ミラ番・ゴロ番）を踏んだら、<a href="https://docs.google.com/forms/d/e/1FAIpQLSeC8vScLoMx_Y_u488S9chWpaPmB-N7EpZAlJ1UFsi0mNmcYQ/viewform">キリ番報告フォーム</a>から教えてください。キリ番掲示板は索引とリンク集の各ページの下にあります。</div>
+
+
+<div class="info-head">★★★　最新情報　★★★</div>
+
+<div class="info">
+<div class="cat">・トップ</div>
+<div class="body">
+入口ページに音楽を追加しました <span class="new">New!</span><br>2026年11月15日
+</div>
+</div>
+
+<div class="info">
+<div class="cat">・索引</div>
+<div class="body">
+<a href="cast-staff-index.html">出演者・スタッフの公開アカウントの索引</a><br>下村未空さんにXとThreadsを追加し、貴瀬真衣さん・平彩葉さん・宮河優希さん・仲丸純一さん・橋本真咲さん・桜井くるみさん・夏生凛さん・宗岡里歩さんを追加しました<br>2026年11月14日 追加
+</div>
+</div>
+
+<div class="info">
+<div class="cat">・リンク集</div>
+<div class="body">
+<a href="streaming-links.html">Hulu・U-NEXTの各話リンク、GagaOOLalaシーズン1の各話リンク</a><br>2026年11月14日 追加
+</div>
+</div>
+
+<div class="info">
+<div class="cat">・キリ番</div>
+<div class="body">
+キリ番掲示板を開きました<br>報告は上のフォームからお願いします
+</div>
+</div>
+
+<div class="note">
+ここは、ファンが個人として運営する非公式のホームページです。<br>
+公式各団体および関係者の皆様とは、一切関係ございません。<br><br>
+This is an unofficial homepage maintained by an individual fan.<br>
+It is in no way affiliated with any official organizations or related parties.<br><br>
+这里是由粉丝以个人身份运营的非官方主页。<br>
+与任何官方机构及相关人士均无任何关联。
+</div>
+
+<script>
+fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/top')
+.then(function(r){return r.json()})
+.then(function(d){document.getElementById('cnt').textContent=d.value})
+.catch(function(){document.getElementById('cnt').textContent='―'});
+</script>
+</body>
+</html>
