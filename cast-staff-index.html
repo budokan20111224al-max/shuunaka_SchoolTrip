@@ -191,6 +191,14 @@
 </style>
 </head>
 <body>
+<div id="shunaka-counter" style="text-align:center;padding:10px 0;font-size:15px;">あなたは <span id="shunaka-count">…</span> 人目の修学旅行生です</div>
+<script>
+fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/index')
+ .then(function(r){return r.json();})
+ .then(function(d){document.getElementById('shunaka-count').textContent=d.value;})
+ .catch(function(){document.getElementById('shunaka-count').textContent='?';});
+</script>
+
 <div class="wrap">
   <div class="counterbar">
     <a class="kiritab" href="#kiriban">キリ番掲示板</a>
@@ -638,13 +646,6 @@ function applySearch(){
 q.addEventListener("input", applySearch);
 document.getElementById("clearBtn").addEventListener("click", function(){ q.value=""; applySearch(); q.focus(); });
 applySearch();
-</script>
-<div id="shunaka-counter" style="text-align:center;padding:10px 0;font-size:15px;">あなたは <span id="shunaka-count">…</span> 人目の修学旅行生です</div>
-<script>
-fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/index')
- .then(function(r){return r.json();})
- .then(function(d){document.getElementById('shunaka-count').textContent=d.value;})
- .catch(function(){document.getElementById('shunaka-count').textContent='?';});
 </script>
 </body>
 </html>
