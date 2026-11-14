@@ -222,7 +222,7 @@ fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/index')
   <nav class="navrow" aria-label="目次">
     <a class="navpill" href="#sec-official">公式<span class="cnt">3</span></a>
     <a class="navpill" href="#sec-novema">ノベマ！<span class="cnt">6</span></a>
-    <a class="navpill" href="#sec-cast">キャスト<span class="cnt">33人</span></a>
+    <a class="navpill" href="#sec-cast">キャスト<span class="cnt">35人</span></a>
     <a class="navpill" href="#sec-staff">スタッフ<span class="cnt">8人</span></a>
     <a class="navpill" href="#sec-streaming">配信<span class="cnt">24</span></a>
   </nav>
@@ -292,7 +292,7 @@ fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/index')
   </section>
 
   <section id="sec-cast" data-section>
-    <h2><span class="n">🚌💨 CAST</span>キャスト <span style="font-size:13px;color:var(--ink3);font-family:inherit">33人</span></h2>
+    <h2><span class="n">🚌💨 CAST</span>キャスト <span style="font-size:13px;color:var(--ink3);font-family:inherit">35人</span></h2>
     <p class="secnote">役名つき。投稿用ボタンは「X用」＝ #名前 @X、「IG用」＝ #名前 @IG をそのままコピーします（グループ所属の人はグループ名タグ付き）。「#タグ」は #名前 のみです。</p>
     <div id="castList"></div>
     <div class="empty" id="castEmpty">キャストに一致する人がいません。</div>
@@ -444,6 +444,7 @@ fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/index')
       <div class="upd"><time datetime="2026-11-14">2026-11-14</time><p>下村未空にXとThreadsを追加しました</p></div>
       <div class="upd"><time datetime="2026-11-14">2026-11-14</time><p>貴瀬真衣（早瀬奈津美 役）を追加しました</p></div>
       <div class="upd"><time datetime="2026-11-14">2026-11-14</time><p>平彩葉・宮河優希・仲丸純一・橋本真咲・桜井くるみを追加しました</p></div>
+      <div class="upd"><time datetime="2026-11-14">2026-11-14</time><p>夏生凛・宗岡里歩を追加しました</p></div>
     </div>
   </section>
 
@@ -499,6 +500,8 @@ var PEOPLE = [
  {kind:"cast", name:"仲丸純一", reading:"なかまる じゅんいち", role:"瀬川大智 役", roleR:"せがわ だいち", x:"junichikamaru", ig:"junkamaru1001"},
  {kind:"cast", name:"橋本真咲", reading:"はしもと まさき", role:"宮澤夏帆 役", roleR:"みやざわ かほ", ig:"masaki.hashimoto_official"},
  {kind:"cast", name:"桜井くるみ", reading:"さくらい くるみ", role:"市原莉菜 役", roleR:"いちはら りな", ig:"sakurai.kurumi"},
+ {kind:"cast", name:"夏生凛", reading:"なつき りん", role:"小野菜緒 役", roleR:"おの なお", ig:"rin_natsuki0812", threads:"rin_natsuki0812"},
+ {kind:"cast", name:"宗岡里歩", reading:"むねおか りほ", role:"高橋仁愛 役", roleR:"たかはし にな", ig:"rippo0506"},
  /* ===== STAFF ===== */
  {kind:"staff", name:"進藤丈広", reading:"しんどう たけひろ", role:"監督", roleR:"かんとく", x:"shindo59512", ig:"takehiro_shindo", kw:"監督 かんとく"},
  {kind:"staff", name:"長谷川卓也", reading:"はせがわ たくや", role:"監督", roleR:"かんとく", x:"hasetaku0227", ig:"hasegawa_takuya0227", kw:"監督 かんとく"},
@@ -650,7 +653,7 @@ function applySearch(){
     streamSec.style.display = anySvcBlock ? "" : "none";
   }
   if(tokens.length===0){
-    countLine.innerHTML = "キャスト <b>33人</b> ・ スタッフ <b>8人</b> ・ 公式 3 ・ 配信 24 ・ ノベマ！ 6";
+    countLine.innerHTML = "キャスト <b>35人</b> ・ スタッフ <b>8人</b> ・ 公式 3 ・ 配信 24 ・ ノベマ！ 6";
   } else {
     countLine.innerHTML = "「"+esc(q.value)+"」— 人物 <b>"+shownPeople+"件</b> が一致";
   }
