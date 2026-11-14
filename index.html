@@ -55,7 +55,7 @@ h1{font-size:22px;margin:0 0 4px}
 <div class="pitem">管理人<br><b>Buna_布暖</b></div>
 <div class="pitem">Twitter<br><a href="https://x.com/bunabuna___">@bunabuna___</a></div>
 <div class="pitem">Instagram<br><a href="https://www.instagram.com/igbuna20260101/">@igbuna20260101</a></div>
-<div class="pitem bgm">お迎えBGM<br><b>GATE OF THE ENDLESS BLUE</b><br>音がなります<audio id="bgm" controls loop preload="none" src="gate_of_the_endless_blue.mp3" aria-label="お迎えBGM GATE OF THE ENDLESS BLUE"></audio><button type="button" id="bgmStop">止める</button></div>
+<div class="pitem bgm">お迎えBGM<br><b>GATE OF THE ENDLESS BLUE</b><br>音がなります<audio id="bgm" controls loop autoplay preload="auto" src="gate_of_the_endless_blue.mp3" aria-label="お迎えBGM GATE OF THE ENDLESS BLUE"></audio><button type="button" id="bgmStop">止める</button></div>
 </div>
 
 <div class="right">
@@ -104,7 +104,11 @@ It is in no way affiliated with any official organizations or related parties.<b
 </div>
 
 <script>
-document.getElementById('bgmStop').addEventListener('click',function(){var a=document.getElementById('bgm');a.pause();a.currentTime=0;});
+var bgmA=document.getElementById('bgm');var bgmStopped=false;
+function bgmPlay(){if(bgmStopped)return;var p=bgmA.play();if(p!==undefined){p.catch(function(){});}}
+bgmPlay();
+document.addEventListener('pointerdown',function bgmFirst(){bgmPlay();document.removeEventListener('pointerdown',bgmFirst);});
+document.getElementById('bgmStop').addEventListener('click',function(){bgmStopped=true;bgmA.pause();bgmA.currentTime=0;});
 </script>
 <script>
 fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/top')
