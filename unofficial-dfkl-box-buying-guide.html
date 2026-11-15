@@ -93,8 +93,6 @@ tbody tr.best td{background:var(--gray-soft)}
 .card p{margin:0 0 8px}
 .card ul{margin:0;padding-left:1.2em}
 .card li{margin-bottom:4px}
-.card.rowline{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 0;border-top:1px solid var(--line);flex-wrap:wrap}
-.card.rowline:first-of-type{border-top:none}
 .ended{display:inline-block;background:var(--gray-mid);color:var(--text);font-size:.76rem;font-weight:700;border-radius:6px;padding:2px 8px;margin-left:6px}
 .memo h3{color:var(--navy)}
 .memo strong{color:var(--red-dark)}
@@ -255,25 +253,15 @@ fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/dfkl')
 <div class="card">
 <h3>楽天ブックス限定 先着特典（ポストカード）付</h3>
 <p class="detail">絵柄：モノクロ、立った2ショット（キービジュアル）。裏面は両店共通。</p>
-<div class="rowline">
-<span>Blu-ray BOX<br><span class="price">23,982<small>円</small></span></span>
-<a class="btn" href="https://books.rakuten.co.jp/rb/18816678/" target="_blank" rel="noopener">商品ページ</a>
-</div>
-<div class="rowline">
-<span>DVD-BOX<br><span class="price">19,750<small>円</small></span></span>
-<a class="btn" href="https://books.rakuten.co.jp/rb/18816679/" target="_blank" rel="noopener">商品ページ</a>
-</div>
+<p>Blu-ray BOX <span class="price">23,982<small>円</small></span></p>
+<p>DVD-BOX <span class="price">19,750<small>円</small></span></p>
+<p style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap"><a class="btn" href="https://books.rakuten.co.jp/rb/18816678/" target="_blank" rel="noopener">Blu-ray 商品ページ</a><a class="btn" href="https://books.rakuten.co.jp/rb/18816679/" target="_blank" rel="noopener">DVD 商品ページ</a></p>
 </div>
 <div class="card">
 <h3>Amazon限定 ポストカード付（Amazon絵柄）</h3>
 <p class="detail">絵柄：カラー写真、椅子に座った2ショット。裏面は両店共通。</p>
-<div class="rowline">
-<span>Blu-ray BOX<br><span class="price">25,245<small>円</small></span></span>
-<span class="detail">252ポイント</span>
-</div>
-<div class="rowline">
-<span>DVD-BOX<br><span class="price">20,790<small>円</small></span></span>
-</div>
+<p>Blu-ray BOX <span class="price">25,245<small>円</small></span>（252ポイント）</p>
+<p>DVD-BOX <span class="price">20,790<small>円</small></span></p>
 <p style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap"><a class="btn" href="https://www.amazon.co.jp/dp/B0HJZ92M2G" target="_blank" rel="noopener">Blu-ray 商品ページ</a><a class="btn" href="https://amzn.asia/d/0a5S3J7b" target="_blank" rel="noopener">DVD 商品ページ</a></p>
 </div>
 <div class="card wide">
@@ -284,7 +272,7 @@ fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/dfkl')
 </ul>
 <p>特典はなくなり次第終了です。</p>
 <p>Wチャンス抽選（渡部秀＆齋藤璃佑 直筆サイン入り2ショットチェキ、3名様）：対象期間 2026年9月21日（月・祝）18:00～11月15日（日）23:59<span class="ended">受付終了</span></p>
-<p><a class="btn" href="https://shop-tce.jp/pages/kissato" target="_blank" rel="noopener">TCエンタSHOP 商品ページ</a></p>
+<p style="display:flex;gap:8px;flex-wrap:wrap"><a class="btn" href="https://shop-tce.jp/products/tcbd-2016" target="_blank" rel="noopener">Blu-ray 商品ページ</a><a class="btn" href="https://shop-tce.jp/products/tced-8874" target="_blank" rel="noopener">DVD 商品ページ</a></p>
 </div>
 </div>
 </section>
