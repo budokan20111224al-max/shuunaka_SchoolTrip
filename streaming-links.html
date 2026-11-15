@@ -112,7 +112,7 @@ header{padding-top:32px}
 <script>
 (function(){
 var el=document.getElementById('shunaka-count');
-function show(d){el.textContent=d.value;}
+function show(d){if(d&&typeof d.value==='number'){el.textContent=d.value}else{fail(1)}}
 function fail(n){ if(n<3){ setTimeout(function(){tryGet(n+1)},3000); } else { el.textContent='?'; } }
 function tryGet(n){
 fetch('https://abacus.jasoncameron.dev/get/buna-shunaka/links')
