@@ -74,10 +74,17 @@ It is in no way affiliated with any official organizations or related parties.<b
 </div>
 
 <script>
+(function(){
+var el=document.getElementById('cnt');
+function show(d){el.textContent=d.value}
+function fail(n){ if(n<3){ setTimeout(function(){tryGet(n+1)},3000); } else { el.textContent='―'; } }
+function tryGet(n){
+fetch('https://abacus.jasoncameron.dev/get/buna-shunaka/top')
+.then(function(r){return r.json()}).then(show).catch(function(){fail(n)});
+}
 fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/top')
-.then(function(r){return r.json()})
-.then(function(d){document.getElementById('cnt').textContent=d.value})
-.catch(function(){document.getElementById('cnt').textContent='―'});
+.then(function(r){return r.json()}).then(show).catch(function(){fail(1)});
+})();
 </script>
 <!--shinobi1--><script type="text/javascript" src="//xa.shinobi.jp/ufo/192388400"></script><noscript><a href="//xa.shinobi.jp/bin/gg?192388400" target="_blank"><img src="//xa.shinobi.jp/bin/ll?192388400" border="0"></a><br><span style="font-size:9px"><img style="margin:0;vertical-align:text-bottom;" src="//img.shinobi.jp/tadaima/fj.gif" width="19" height="11"> </span></noscript><!--shinobi2-->
 </body>
