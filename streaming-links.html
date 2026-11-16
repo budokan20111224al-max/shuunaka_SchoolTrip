@@ -112,14 +112,21 @@ header{padding-top:32px}
 <script>
 (function(){
 var el=document.getElementById('shunaka-count');
+var day=new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Tokyo'});
+var skey='shunaka-cnt-links';
+var counted=false;
+try{counted=localStorage.getItem(skey)===day;}catch(e){}
 function show(d){if(d&&typeof d.value==='number'){el.textContent=d.value}else{fail(1)}}
 function fail(n){ if(n<3){ setTimeout(function(){tryGet(n+1)},3000); } else { el.textContent='?'; } }
 function tryGet(n){
 fetch('https://abacus.jasoncameron.dev/get/buna-shunaka/links')
 .then(function(r){return r.json();}).then(show).catch(function(){fail(n);});
 }
+if(counted){ tryGet(0); }
+else{
 fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/links')
-.then(function(r){return r.json();}).then(show).catch(function(){fail(1);});
+.then(function(r){return r.json();}).then(function(d){ try{localStorage.setItem(skey,day);}catch(e){} show(d); }).catch(function(){fail(1);});
+}
 })();
 </script>
 
