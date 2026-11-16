@@ -104,6 +104,9 @@ tbody tr.bonus td{background:var(--bonus-bg)}
 .history ul{list-style:none;margin:0;padding:0;font-size:.8rem;color:var(--muted)}
 .history li{padding:3px 0;border-top:1px solid var(--line);display:flex;gap:12px}
 .history time{flex:0 0 auto;font-variant-numeric:tabular-nums;font-weight:600}
+.entrance{margin-bottom:28px;border:1px solid var(--line);border-radius:10px;padding:18px 16px;text-align:center;background:var(--card)}
+.entrance p{margin:0 0 12px;font-size:.92rem}
+.entrance .btn{min-width:220px}
 footer{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:.85rem}
 footer p{margin:0 0 4px}
 @media(max-width:640px){
@@ -314,6 +317,12 @@ fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/dfkl')
 </div>
 </section>
 
+<section class="entrance" aria-labelledby="entrance">
+<h2 id="entrance" class="sec">ファンまとめの入口</h2>
+<p>ドラマ『修学旅行で仲良くないグループに入りました』のキャスト・スタッフ索引と配信リンク集は、入口のトップページにまとめています。</p>
+<a class="btn" href="https://buna20260101.github.io/shuunaka_SchoolTrip/">トップページ（入口）へ</a>
+</section>
+
 <section class="history" aria-labelledby="history">
 <h2 id="history">更新履歴</h2>
 <ul>
@@ -322,6 +331,7 @@ fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/dfkl')
 <li><time datetime="2026-11-16">2026-11-16</time><span>クーポン・ポイントのメモを直しました</span></li>
 <li><time datetime="2026-11-16">2026-11-16</time><span>特典付きの色と抽選の表示を直しました</span></li>
 <li><time datetime="2026-11-16">2026-11-16</time><span>メモのボタンを各店のトップ・一覧に変えました</span></li>
+<li><time datetime="2026-11-16">2026-11-16</time><span>入口へ戻るボタンを付けました</span></li>
 </ul>
 </section>
 
