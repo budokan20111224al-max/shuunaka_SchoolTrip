@@ -22,6 +22,7 @@
 --price:#111111;
 --btn-bg:#1d3557;
 --btn-text:#ffffff;
+--bonus-bg:#e9eff7;
 }
 @media (prefers-color-scheme: dark){
 :root{
@@ -39,6 +40,7 @@
 --price:#f0f0f0;
 --btn-bg:#e8e8e8;
 --btn-text:#14263f;
+--bonus-bg:#232f42;
 }
 }
 *{box-sizing:border-box}
@@ -76,6 +78,7 @@ table{width:100%;border-collapse:collapse;background:var(--card);border:1px soli
 thead th{background:var(--gray-soft);text-align:left;font-size:.82rem;color:var(--muted);padding:10px 14px;font-weight:700}
 tbody td{padding:14px;border-top:1px solid var(--line);vertical-align:top}
 tbody tr.best td{background:var(--gray-soft)}
+tbody tr.bonus td{background:var(--bonus-bg)}
 .shop{font-weight:700;color:var(--navy)}
 .badge{display:inline-block;font-size:.72rem;font-weight:800;background:var(--red);color:#fff;border-radius:999px;padding:2px 9px;margin-left:6px;vertical-align:2px}
 .price{font-size:1.28rem;font-weight:800;color:var(--price);white-space:nowrap}
@@ -202,13 +205,13 @@ fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/dfkl')
 <td class="detail"><span>-14%</span><span>217ポイント（1%）</span><span>Prime対象／予約商品の価格保証対象</span></td>
 <td class="cell-link"><a class="btn" href="https://amzn.asia/d/0eZCWYU9" target="_blank" rel="noopener">商品ページ</a></td>
 </tr>
-<tr>
+<tr class="bonus">
 <td class="cell-shop"><span class="shop">楽天ブックス</span><div class="detail">特典付き（ポストカード）</div></td>
 <td><span class="price">23,982<small>円</small></span></td>
 <td class="detail"><span>先着特典ポストカード付</span><span>絵柄：モノクロ、立った2ショット</span><span>送料無料</span><span>218ポイント</span></td>
 <td class="cell-link"><a class="btn" href="https://books.rakuten.co.jp/rb/18816678/" target="_blank" rel="noopener">商品ページ</a></td>
 </tr>
-<tr>
+<tr class="bonus">
 <td class="cell-shop"><span class="shop">Amazon.co.jp</span><div class="detail">特典付き（ポストカード）</div></td>
 <td><span class="price">25,245<small>円</small></span></td>
 <td class="detail"><span>ポストカード付</span><span>絵柄：カラー、椅子に座った2ショット</span><span>252ポイント</span></td>
@@ -254,13 +257,13 @@ fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/dfkl')
 <td class="detail"><span>15%OFF</span><span>送料はABCミッケ負担</span></td>
 <td class="cell-link"><a class="btn" href="https://shop.asahi.co.jp/category/ABC_KISSATO/W0006640.html" target="_blank" rel="noopener">商品ページ</a></td>
 </tr>
-<tr>
+<tr class="bonus">
 <td class="cell-shop"><span class="shop">楽天ブックス</span><div class="detail">特典付き（ポストカード）</div></td>
 <td><span class="price">19,750<small>円</small></span></td>
 <td class="detail"><span>先着特典ポストカード付</span><span>絵柄：モノクロ、立った2ショット</span><span>送料無料</span><span>179ポイント</span></td>
 <td class="cell-link"><a class="btn" href="https://books.rakuten.co.jp/rb/18816679/" target="_blank" rel="noopener">商品ページ</a></td>
 </tr>
-<tr>
+<tr class="bonus">
 <td class="cell-shop"><span class="shop">Amazon.co.jp</span><div class="detail">特典付き（ポストカード）</div></td>
 <td><span class="price">20,790<small>円</small></span></td>
 <td class="detail"><span>ポストカード付</span><span>絵柄：カラー、椅子に座った2ショット</span></td>
