@@ -114,6 +114,27 @@ tbody td.cell-link{padding-bottom:14px}
 </style>
 </head>
 <body>
+<div id="shunaka-counter" style="text-align:center;padding:10px 0;font-size:15px;">您是第 <span id="shunaka-count">…</span> 位访问者</div>
+<script>
+(function(){
+var el=document.getElementById('shunaka-count');
+var day=new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Tokyo'});
+var skey='shunaka-cnt-dfkl-zh';
+var counted=false;
+try{counted=localStorage.getItem(skey)===day;}catch(e){}
+function show(d){if(d&&typeof d.value==='number'){el.textContent=d.value}else{fail(1)}}
+function fail(n){ if(n<3){ setTimeout(function(){tryGet(n+1)},3000); } else { el.textContent='?'; } }
+function tryGet(n){
+fetch('https://abacus.jasoncameron.dev/get/buna-shunaka/dfkl-zh')
+.then(function(r){return r.json();}).then(show).catch(function(){fail(n);});
+}
+if(counted){ tryGet(0); }
+else{
+fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/dfkl-zh')
+.then(function(r){return r.json();}).then(function(d){ try{localStorage.setItem(skey,day);}catch(e){} show(d); }).catch(function(){fail(1);});
+}
+})();
+</script>
 <div class="wrap">
 
 <div class="topbar">
