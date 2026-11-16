@@ -107,6 +107,14 @@ tbody tr.bonus td{background:var(--bonus-bg)}
 .entrance{margin-bottom:28px;border:1px solid var(--line);border-radius:10px;padding:18px 16px;text-align:center;background:var(--card)}
 .entrance p{margin:0 0 12px;font-size:.92rem}
 .entrance .btn{min-width:220px}
+.tabs input{position:absolute;opacity:0;pointer-events:none}
+.tablabels{display:flex;gap:8px;margin-bottom:14px}
+.tablabels label{flex:1;text-align:center;padding:11px 8px;border:1px solid var(--line);border-bottom:3px solid var(--line);border-radius:10px;background:var(--card);font-weight:800;color:var(--muted);cursor:pointer;font-size:1.02rem}
+.tablabels label span{display:block;font-size:.78rem;font-weight:600;margin-top:2px}
+#tab-bd:checked~.tablabels label[for="tab-bd"],#tab-dvd:checked~.tablabels label[for="tab-dvd"]{color:var(--navy);border-bottom-color:var(--red);background:var(--gray-soft)}
+.panel{display:none}
+#tab-bd:checked~.panel-bd{display:block}
+#tab-dvd:checked~.panel-dvd{display:block}
 footer{border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:.85rem}
 footer p{margin:0 0 4px}
 @media(max-width:640px){
@@ -183,8 +191,15 @@ fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/dfkl')
 </ul>
 </section>
 
-<section aria-labelledby="bd">
-<h2 class="sec" id="bd">Blu-ray BOX <span class="listprice">定価 25,245円</span></h2>
+<section aria-label="価格表">
+<div class="tabs">
+<input type="radio" name="boxtab" id="tab-bd" checked>
+<input type="radio" name="boxtab" id="tab-dvd">
+<div class="tablabels">
+<label for="tab-bd">Blu-ray BOX<span>定価 25,245円</span></label>
+<label for="tab-dvd">DVD-BOX<span>定価 20,790円</span></label>
+</div>
+<div class="panel panel-bd">
 <p class="sec-note">価格の安い順です。すべて税込（特典付きを含む）。</p>
 <table>
 <thead><tr><th>店舗</th><th>価格</th><th>割引・ポイントなど</th><th>リンク</th></tr></thead>
@@ -194,6 +209,42 @@ fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/dfkl')
 <td><span class="price">19,691<small>円</small></span></td>
 <td class="detail"><span>22%OFF</span><span>送料無料</span><span>179ポイント</span></td>
 <td class="cell-link"><a class="btn" href="https://books.rakuten.co.jp/rb/18816034/" target="_blank" rel="noopener">商品ページ</a></td>
+</tr>
+<tr>
+<td class="cell-shop"><span class="shop">au PAY マーケット</span><div class="detail">ハピネット・オンラインが出品</div></td>
+<td><span class="price">19,802<small>円</small></span></td>
+<td class="detail"><span>198ポイント（1%）</span><span>東京都は送料無料</span></td>
+<td class="cell-link"><a class="btn" href="https://wowma.jp/item/790374557" target="_blank" rel="noopener">商品ページ</a></td>
+</tr>
+<tr>
+<td class="cell-shop"><span class="shop">セブンネット</span></td>
+<td><span class="price">20,196<small>円</small></span></td>
+<td class="detail"><span>20%OFF</span><span>セブン-イレブン受取りは送料無料</span><span>宅配は550円</span></td>
+<td class="cell-link"><a class="btn" href="https://7net.omni7.jp/detail/1421549114.html" target="_blank" rel="noopener">商品ページ</a></td>
+</tr>
+<tr>
+<td class="cell-shop"><span class="shop">ぐるぐる王国</span><div class="detail">Yahoo!店</div></td>
+<td><span class="price">20,523<small>円</small></span></td>
+<td class="detail"><span>予約受付中</span></td>
+<td class="cell-link"><a class="btn" href="https://store.shopping.yahoo.co.jp/guruguru/tcbd-2016.html" target="_blank" rel="noopener">商品ページ</a></td>
+</tr>
+<tr>
+<td class="cell-shop"><span class="shop">ジョーシン</span></td>
+<td><span class="price">20,700<small>円</small></span></td>
+<td class="detail"><span>会員web価格</span><span>送料無料</span><span>1%ポイント</span></td>
+<td class="cell-link"><a class="btn" href="https://joshinweb.jp/dp/4571519946111.html" target="_blank" rel="noopener">商品ページ</a></td>
+</tr>
+<tr>
+<td class="cell-shop"><span class="shop">HMV&amp;BOOKS online</span></td>
+<td><span class="price">20,953<small>円</small></span></td>
+<td class="detail"><span>会員価格（通常価格 25,245円）</span><span>まとめ買い価格 20,701円</span><span>Pontaポイント</span></td>
+<td class="cell-link"><a class="btn" href="https://www.hmv.co.jp/artist_%E3%83%89%E3%83%A9%E3%83%9E_000000000030794/item_%E3%82%AD%E3%82%B9%E3%81%AF%E6%8D%9C%E6%9F%BB%E3%81%AE%E3%81%82%E3%81%A8%E3%81%A7-Blu-ray-BOX_17275218" target="_blank" rel="noopener">商品ページ</a></td>
+</tr>
+<tr>
+<td class="cell-shop"><span class="shop">ヤマダウェブコム</span></td>
+<td><span class="price">21,457<small>円</small></span></td>
+<td class="detail"><span>送料無料</span><span>お一人様1個限り</span></td>
+<td class="cell-link"><a class="btn" href="https://www.yamada-denkiweb.com/1871812013/" target="_blank" rel="noopener">商品ページ</a></td>
 </tr>
 <tr>
 <td class="cell-shop"><span class="shop">ABCミッケ</span><div class="detail">ABC公式通販</div></td>
@@ -213,6 +264,18 @@ fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/dfkl')
 <td class="detail"><span>-14%</span><span>217ポイント（1%）</span><span>Prime対象／予約商品の価格保証対象</span></td>
 <td class="cell-link"><a class="btn" href="https://amzn.asia/d/0eZCWYU9" target="_blank" rel="noopener">商品ページ</a></td>
 </tr>
+<tr>
+<td class="cell-shop"><span class="shop">CDJapan</span></td>
+<td><span class="price">22,950<small>円</small></span></td>
+<td class="detail"><span>海外向け価格（税抜）</span><span>海外発送可</span></td>
+<td class="cell-link"><a class="btn" href="https://www.cdjapan.co.jp/product/TCBD-2016" target="_blank" rel="noopener">商品ページ</a></td>
+</tr>
+<tr>
+<td class="cell-shop"><span class="shop">サプライズWEB</span><div class="detail">楽天市場</div></td>
+<td><span class="price">23,225<small>円</small></span></td>
+<td class="detail"><span>送料無料</span><span>211ポイント</span></td>
+<td class="cell-link"><a class="btn" href="https://item.rakuten.co.jp/surprise-web/azntcbd-2016/" target="_blank" rel="noopener">商品ページ</a></td>
+</tr>
 <tr class="bonus">
 <td class="cell-shop"><span class="shop">楽天ブックス</span><div class="detail">特典付き（ポストカード）</div></td>
 <td><span class="price">23,982<small>円</small></span></td>
@@ -225,19 +288,47 @@ fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/dfkl')
 <td class="detail"><span>ポストカード付</span><span>絵柄：カラー、椅子に座った2ショット</span><span>252ポイント</span></td>
 <td class="cell-link"><a class="btn" href="https://www.amazon.co.jp/dp/B0HJZ92M2G" target="_blank" rel="noopener">商品ページ</a></td>
 </tr>
+<tr>
+<td class="cell-shop"><span class="shop">タワーレコード オンライン</span></td>
+<td><span class="price">25,245<small>円</small></span></td>
+<td class="detail"><span>229ポイント還元</span></td>
+<td class="cell-link"><a class="btn" href="https://tower.jp/item/8172621" target="_blank" rel="noopener">商品ページ</a></td>
+</tr>
 <tr class="bonus">
 <td class="cell-shop"><span class="shop">TCエンタSHOP</span></td>
 <td><span class="price">25,245<small>円</small></span></td>
 <td class="detail"><span>定価</span><span>予約特典：ポラロイド風カード3枚セット（複製サイン入り）／すう先生描きおろしイラスト（B6サイズ）</span><span>特典はなくなり次第終了</span><span>Wチャンス抽選（渡部秀＆齋藤璃佑 直筆サイン入り2ショットチェキ、3名様）：対象期間 2026年9月21日（月・祝）18:00～11月15日（日）23:59 <span class="ended">抽選の受付は終了</span></span></td>
 <td class="cell-link"><div style="display:flex;flex-direction:column;gap:6px;align-items:stretch"><a class="btn" href="https://shop-tce.jp/products/tcbd-2016" target="_blank" rel="noopener">商品ページ</a><a class="btn" href="https://x.com/tce_now/status/2120350812136247501" target="_blank" rel="noopener">公式Xの案内ポスト</a></div></td>
 </tr>
+<tr>
+<td class="cell-shop"><span class="shop">ネオウィング</span></td>
+<td><span class="price">25,245<small>円</small></span></td>
+<td class="detail"><span>ポイント10%（2,524ポイント）</span><span>送料無料</span></td>
+<td class="cell-link"><a class="btn" href="https://www.neowing.co.jp/product/TCBD-2016" target="_blank" rel="noopener">商品ページ</a></td>
+</tr>
+<tr>
+<td class="cell-shop"><span class="shop">サイバーベイ</span><div class="detail">楽天市場</div></td>
+<td><span class="price">25,245<small>円</small></span></td>
+<td class="detail"><span>送料無料</span></td>
+<td class="cell-link"><a class="btn" href="https://item.rakuten.co.jp/cyberbay/tcbd-2016/" target="_blank" rel="noopener">商品ページ</a></td>
+</tr>
+<tr>
+<td class="cell-shop"><span class="shop">e-hon</span></td>
+<td><span class="price">25,245<small>円</small></span></td>
+<td class="detail"><span>発売前で現在は注文できません</span></td>
+<td class="cell-link"><a class="btn" href="https://www.e-hon.ne.jp/bec/SP/SA/DetailMulti?refSdCode=040000000TCBD-2016&Action_id=121&Sza_id=MM" target="_blank" rel="noopener">商品ページ</a></td>
+</tr>
+<tr>
+<td class="cell-shop"><span class="shop">CDs Vinyl Japan</span></td>
+<td><span class="price">25,245<small>円</small></span></td>
+<td class="detail"><span>海外向けの店</span></td>
+<td class="cell-link"><a class="btn" href="https://cdsvinyljapan.com/products/4571519946111" target="_blank" rel="noopener">商品ページ</a></td>
+</tr>
 </tbody>
 </table>
-</section>
-
-<section aria-labelledby="dvd">
-<h2 class="sec" id="dvd">DVD-BOX <span class="listprice">定価 20,790円</span></h2>
-<p class="sec-note">価格の安い順です。</p>
+</div>
+<div class="panel panel-dvd">
+<p class="sec-note">価格の安い順です。すべて税込（特典付きを含む）。</p>
 <table>
 <thead><tr><th>店舗</th><th>価格</th><th>割引・ポイントなど</th><th>リンク</th></tr></thead>
 <tbody>
@@ -248,10 +339,34 @@ fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/dfkl')
 <td class="cell-link"><a class="btn" href="https://books.rakuten.co.jp/rb/18816035/" target="_blank" rel="noopener">商品ページ</a></td>
 </tr>
 <tr>
+<td class="cell-shop"><span class="shop">セブンネット</span></td>
+<td><span class="price">16,632<small>円</small></span></td>
+<td class="detail"><span>20%OFF</span><span>セブン-イレブン受取りは送料無料</span><span>nanacoポイント 75ポイント</span></td>
+<td class="cell-link"><a class="btn" href="https://7net.omni7.jp/detail/1421549121.html" target="_blank" rel="noopener">商品ページ</a></td>
+</tr>
+<tr>
 <td class="cell-shop"><span class="shop">Amazon.co.jp</span></td>
 <td><span class="price">16,724<small>円</small></span></td>
 <td class="detail"><span>-20%</span><span>167ポイント（1%）</span><span>Prime対象／予約商品の価格保証対象</span></td>
 <td class="cell-link"><a class="btn" href="https://amzn.asia/d/0eTOF7NB" target="_blank" rel="noopener">商品ページ</a></td>
+</tr>
+<tr>
+<td class="cell-shop"><span class="shop">ジョーシン</span></td>
+<td><span class="price">17,047<small>円</small></span></td>
+<td class="detail"><span>会員web価格</span><span>送料無料</span><span>170ポイント相当</span></td>
+<td class="cell-link"><a class="btn" href="https://joshinweb.jp/dp/4571519946128.html" target="_blank" rel="noopener">商品ページ</a></td>
+</tr>
+<tr>
+<td class="cell-shop"><span class="shop">ハピネット・オンライン</span><div class="detail">Yahoo!店</div></td>
+<td><span class="price">17,255<small>円</small></span></td>
+<td class="detail"><span>発売日以降のお届け</span></td>
+<td class="cell-link"><a class="btn" href="https://store.shopping.yahoo.co.jp/esdigital/11053609.html" target="_blank" rel="noopener">商品ページ</a></td>
+</tr>
+<tr>
+<td class="cell-shop"><span class="shop">HMV&amp;BOOKS online</span></td>
+<td><span class="price">17,256<small>円</small></span></td>
+<td class="detail"><span>会員価格（通常価格 20,790円）</span></td>
+<td class="cell-link"><a class="btn" href="https://www.hmv.co.jp/en/artist_TV-Drama_000000000030794/item_Kiss-Ha-Sousa-No-Ato-De-DVD-Box_17275219" target="_blank" rel="noopener">商品ページ</a></td>
 </tr>
 <tr>
 <td class="cell-shop"><span class="shop">ヨドバシ.com</span></td>
@@ -265,6 +380,24 @@ fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/dfkl')
 <td class="detail"><span>15%OFF</span><span>送料はABCミッケ負担</span></td>
 <td class="cell-link"><a class="btn" href="https://shop.asahi.co.jp/category/ABC_KISSATO/W0006640.html" target="_blank" rel="noopener">商品ページ</a></td>
 </tr>
+<tr>
+<td class="cell-shop"><span class="shop">ぐるぐる王国FS</span><div class="detail">楽天市場</div></td>
+<td><span class="price">17,838<small>円</small></span></td>
+<td class="detail"><span>発売日以降のお届け</span></td>
+<td class="cell-link"><a class="btn" href="https://item.rakuten.co.jp/mifsoft/tced-8874/" target="_blank" rel="noopener">商品ページ</a></td>
+</tr>
+<tr>
+<td class="cell-shop"><span class="shop">CDJapan</span></td>
+<td><span class="price">18,900<small>円</small></span></td>
+<td class="detail"><span>海外向け価格（税抜）</span><span>海外発送可</span></td>
+<td class="cell-link"><a class="btn" href="https://www.cdjapan.co.jp/product/TCED-8874" target="_blank" rel="noopener">商品ページ</a></td>
+</tr>
+<tr>
+<td class="cell-shop"><span class="shop">ネオウィング</span><div class="detail">Yahoo!店</div></td>
+<td><span class="price">19,126<small>円</small></span></td>
+<td class="detail"><span>送料無料</span></td>
+<td class="cell-link"><a class="btn" href="https://store.shopping.yahoo.co.jp/neowing/tced-8874.html" target="_blank" rel="noopener">商品ページ</a></td>
+</tr>
 <tr class="bonus">
 <td class="cell-shop"><span class="shop">楽天ブックス</span><div class="detail">特典付き（ポストカード）</div></td>
 <td><span class="price">19,750<small>円</small></span></td>
@@ -277,6 +410,18 @@ fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/dfkl')
 <td class="detail"><span>ポストカード付</span><span>絵柄：カラー、椅子に座った2ショット</span></td>
 <td class="cell-link"><a class="btn" href="https://amzn.asia/d/0a5S3J7b" target="_blank" rel="noopener">商品ページ</a></td>
 </tr>
+<tr>
+<td class="cell-shop"><span class="shop">ネオウィング</span></td>
+<td><span class="price">20,790<small>円</small></span></td>
+<td class="detail"><span>ポイント10%（2,079ポイント）</span><span>送料無料</span></td>
+<td class="cell-link"><a class="btn" href="https://www.neowing.co.jp/product/TCED-8874" target="_blank" rel="noopener">商品ページ</a></td>
+</tr>
+<tr>
+<td class="cell-shop"><span class="shop">タワーレコード オンライン</span></td>
+<td><span class="price">20,790<small>円</small></span></td>
+<td class="detail"><span>189ポイント還元</span></td>
+<td class="cell-link"><a class="btn" href="https://tower.jp/item/8172622" target="_blank" rel="noopener">商品ページ</a></td>
+</tr>
 <tr class="bonus">
 <td class="cell-shop"><span class="shop">TCエンタSHOP</span></td>
 <td><span class="price">20,790<small>円</small></span></td>
@@ -286,6 +431,8 @@ fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/dfkl')
 </tbody>
 </table>
 <p class="sec-note">特典ポストカードの裏面は、楽天ブックス・Amazonとも共通です。</p>
+</div>
+</div>
 </section>
 
 <section aria-labelledby="memo">
@@ -317,6 +464,41 @@ fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/dfkl')
 </div>
 </section>
 
+<section aria-labelledby="overseas">
+<h2 class="sec" id="overseas">海外から買うには</h2>
+<div class="cards">
+<div class="card">
+<h3>直接送ってくれる店</h3>
+<ul>
+<li>CDJapan：世界中へ発送できます。送料は注文前に計算できます</li>
+<li>HMV&amp;BOOKS online：EMSで発送します。送料は1,550円から。関税は受け取る人の負担です</li>
+</ul>
+</div>
+<div class="card">
+<h3>転送サービス・代理購入を使う店</h3>
+<ul>
+<li>楽天ブックス：楽天グローバルエクスプレスで海外へ送れます</li>
+<li>タワーレコード オンライン：Buyee／WorldShopping／転送コムが公式に使えます</li>
+<li>ほかの日本の店も、ZenMarketなどの代理購入で買える場合があります</li>
+</ul>
+</div>
+<div class="card">
+<h3>海外からは買えない店</h3>
+<ul>
+<li>ジョーシン：転送サービス宛ての注文と購入代行は、公式にキャンセル対象です</li>
+<li>セブンネット：海外発送はなし。海外発行のクレジットカードも使えません</li>
+</ul>
+</div>
+<div class="card">
+<h3>Amazon.co.jpと再生の注意</h3>
+<ul>
+<li>Amazon.co.jpの海外発送（AmazonGlobal）は対象商品だけです。この商品が対象かどうかは未確認です</li>
+<li>日本のBlu-rayはリージョンA、DVDはリージョン2・NTSC方式です。再生機のリージョンと方式を確認してください</li>
+</ul>
+</div>
+</div>
+</section>
+
 <section class="entrance" aria-labelledby="entrance">
 <h2 id="entrance" class="sec">ファンまとめの入口</h2>
 <p>ドラマ『修学旅行で仲良くないグループに入りました』のキャスト・スタッフ索引と配信リンク集は、入口のトップページにまとめています。</p>
@@ -332,6 +514,9 @@ fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/dfkl')
 <li><time datetime="2026-11-16">2026-11-16</time><span>特典付きの色と抽選の表示を直しました</span></li>
 <li><time datetime="2026-11-16">2026-11-16</time><span>メモのボタンを各店のトップ・一覧に変えました</span></li>
 <li><time datetime="2026-11-16">2026-11-16</time><span>入口へ戻るボタンを付けました</span></li>
+<li><time datetime="2026-11-16">2026-11-16</time><span>販売サイトを増やし、Blu-rayとDVDをタブで切り替える形にしました</span></li>
+<li><time datetime="2026-11-16">2026-11-16</time><span>値段が同じ店どうしでは、Amazonを上に並べる形にしました</span></li>
+<li><time datetime="2026-11-16">2026-11-16</time><span>海外から買う方法を足しました</span></li>
 </ul>
 </section>
 
