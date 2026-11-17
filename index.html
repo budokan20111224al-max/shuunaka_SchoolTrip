@@ -19,7 +19,7 @@ a{color:#2f6f5e}
 .bgm audio{display:block;width:100%;margin-top:6px}
 #bgmStop{display:block;width:100%;margin-top:10px;padding:14px 0;font-size:17px;font-weight:bold;color:#2f6f5e;background:#fff;border:2px solid #40826d;border-radius:8px;cursor:pointer}
 iframe.mainframe{flex:1;border:0;width:100%;height:100%;background:#fff}
-@media(max-width:640px){.wrap{flex-direction:column}.side{width:auto;border-right:none;border-bottom:1px solid #40826d;padding:10px 14px 12px}.side ul{display:grid;grid-template-columns:max-content max-content;column-gap:22px;row-gap:2px;margin:0 0 10px;padding:0}.side li{margin:0;font-size:14px;line-height:1.6;white-space:nowrap}.side li a{display:inline-block;padding:6px 0}.side li.boxlink{grid-column:1/-1}.side .prof{padding:0}.pitem{display:block;margin:0 0 3px;font-size:13px;line-height:1.7}.pitem br{display:none}.pitem b,.pitem a{margin-left:6px}.pitem a{white-space:nowrap}.pitem.bgm{margin-top:7px}.pitem.bgm .bgm-note{display:block;margin-left:0}.bgm audio{margin-top:5px}#bgmStop{display:inline-block;width:auto;margin-top:7px;padding:6px 24px;font-size:14px}}
+@media(max-width:640px){.wrap{flex-direction:column}.side{width:auto;border-right:none;border-bottom:1px solid #40826d;padding:10px 14px 12px}.side ul{display:grid;grid-template-columns:max-content max-content;column-gap:22px;row-gap:2px;margin:0 0 10px;padding:0}.side li{margin:0;font-size:14px;line-height:1.6;white-space:nowrap}.side li a{display:inline-block;padding:6px 0}.side li.boxlink{grid-column:1/-1}.side .prof{padding:0;display:flex;flex-wrap:wrap;gap:2px 16px;align-items:baseline}.pitem{display:inline-block;margin:0;font-size:13px;line-height:1.7}.pitem br{display:none}.pitem b,.pitem a{margin-left:6px}.pitem a{white-space:nowrap}.pitem.bgm{flex-basis:100%;margin-top:5px;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center}.pitem.bgm .bgm-note{display:inline;margin-left:0}.bgm audio{margin-top:0;width:180px;height:34px}#bgmStop{display:inline-block;width:auto;margin-top:0;padding:5px 18px;font-size:13px}}
 @media(max-width:360px){.side ul{column-gap:14px}.side li{font-size:13px}}
 </style>
 </head>
@@ -39,7 +39,7 @@ iframe.mainframe{flex:1;border:0;width:100%;height:100%;background:#fff}
 <div class="pitem">管理人<br><b>Buna_布暖</b></div>
 <div class="pitem">Twitter<br><a href="https://x.com/bunabuna___">@bunabuna___</a></div>
 <div class="pitem">Instagram<br><a href="https://www.instagram.com/igbuna20260101/">@igbuna20260101</a></div>
-<div class="pitem bgm">お迎えBGM<br><b>GATE OF THE ENDLESS BLUE</b><br><span class="bgm-note">音がなります</span><audio id="bgm" controls loop autoplay preload="auto" src="gate_of_the_endless_blue.mp3" aria-label="お迎えBGM GATE OF THE ENDLESS BLUE"></audio><button type="button" id="bgmStop">止める</button></div>
+<div class="pitem bgm">お迎えBGM<br><b>GATE OF THE ENDLESS BLUE</b><br><span class="bgm-note">押すと音がなります</span><audio id="bgm" controls loop preload="metadata" src="gate_of_the_endless_blue.mp3" aria-label="お迎えBGM GATE OF THE ENDLESS BLUE"></audio><button type="button" id="bgmStop">鳴らす</button></div>
 </div>
 </div>
 
@@ -48,11 +48,8 @@ iframe.mainframe{flex:1;border:0;width:100%;height:100%;background:#fff}
 </div>
 
 <script>
-var bgmA=document.getElementById('bgm');var bgmStopped=false;
-function bgmPlay(){if(bgmStopped)return;var p=bgmA.play();if(p!==undefined){p.catch(function(){});}}
-bgmPlay();
-document.addEventListener('pointerdown',function bgmFirst(){bgmPlay();document.removeEventListener('pointerdown',bgmFirst);});
-document.getElementById('bgmStop').addEventListener('click',function(){bgmStopped=true;bgmA.pause();bgmA.currentTime=0;});
+var bgmA=document.getElementById('bgm');var bgmBtn=document.getElementById('bgmStop');
+bgmBtn.addEventListener('click',function(){if(bgmA.paused){var p=bgmA.play();if(p!==undefined){p.catch(function(){});}bgmBtn.textContent='止める';}else{bgmA.pause();bgmA.currentTime=0;bgmBtn.textContent='鳴らす';}});
 </script>
 </body>
 </html>
