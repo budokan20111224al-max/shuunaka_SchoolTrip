@@ -6,6 +6,13 @@
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="data:,">
 <title>非官方粉丝整理《亲吻要在调查之后》Blu-ray BOX／DVD-BOX 价格汇总</title>
+<meta property="og:title" content="非官方粉丝整理《亲吻要在调查之后》Blu-ray BOX／DVD-BOX 价格汇总">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buna20260101.github.io/shuunaka_SchoolTrip/unofficial-dfkl-box-buying-guide-zh.html">
+<meta property="og:description" content="按店铺比较价格、特典与积分。">
+<meta property="og:image" content="https://buna20260101.github.io/shuunaka_SchoolTrip/dfkl-card.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
 <style>
 :root{
 --red:#d21f26;--red-dark:#a80e14;--navy:#1d3557;--navy-dark:#14263f;--gray-soft:#f1f1f1;--gray-mid:#e3e3e3;--bg:#fafafa;--card:#ffffff;--text:#161616;--muted:#5f5f5f;--line:#dddddd;--price:#111111;--btn-bg:#1d3557;--btn-text:#ffffff;--bonus-bg:#fbe9e9;--ok-bg:#e6f3ea;--fwd-bg:#e4edf8;
@@ -76,6 +83,14 @@ tbody tr.bonus td{background:var(--bonus-bg)}
 .cards{display:grid;gap:14px}
 @media(min-width:640px){.cards{grid-template-columns:1fr 1fr}}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.histfold summary{min-height:44px;display:flex;align-items:center;padding:0 14px;border:1.5px solid var(--navy);border-radius:10px;background:var(--card);font-size:.95rem;font-weight:700;color:var(--navy);cursor:pointer;list-style:none}
+.histfold summary::-webkit-details-marker{display:none}
+.histfold summary::after{content:"\25BC";margin-left:auto;font-size:.7rem}
+.histfold[open ] summary::after{content:"\25B2"}
+.histfold[open ] summary{margin-bottom:10px}
+.browsernote{border:1.5px solid var(--navy);border-radius:12px;padding:12px 16px;margin:0 0 16px;font-size:.92rem;background:var(--card)}
+.browsernote p{margin:0}
+.browsernote strong{color:var(--navy)}
 .card.ok{background:var(--ok-bg)}
 .card.fwd{background:var(--fwd-bg)}
 tbody tr.fwdrow td{background:var(--fwd-bg)}
@@ -121,16 +136,17 @@ var el=document.getElementById('shunaka-count');
 var day=new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Tokyo'});
 var skey='shunaka-cnt-dfkl-zh';
 var counted=false;
+function t(u){var c=new AbortController();setTimeout(function(){c.abort()},5000);return fetch(u,{signal:c.signal});}
 try{counted=localStorage.getItem(skey)===day;}catch(e){}
 function show(d){if(d&&typeof d.value==='number'){el.textContent=d.value}else{fail(1)}}
 function fail(n){ if(n<3){ setTimeout(function(){tryGet(n+1)},3000); } else { el.textContent='?'; } }
 function tryGet(n){
-fetch('https://abacus.jasoncameron.dev/get/buna-shunaka/dfkl-zh')
+t('https://abacus.jasoncameron.dev/get/buna-shunaka/dfkl-zh')
 .then(function(r){return r.json();}).then(show).catch(function(){fail(n);});
 }
 if(counted){ tryGet(0); }
 else{
-fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/dfkl-zh')
+t('https://abacus.jasoncameron.dev/hit/buna-shunaka/dfkl-zh')
 .then(function(r){return r.json();}).then(function(d){ try{localStorage.setItem(skey,day);}catch(e){} show(d); }).catch(function(){fail(1);});
 }
 })();
@@ -216,6 +232,7 @@ fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/dfkl-zh')
 </div>
 
 <section aria-label="价格表">
+<div class="browsernote"><p><strong>致通过社交应用内置浏览器查看本页的访客</strong><br>结账可能无法顺利完成。实际购物时，请改用浏览器（如 Safari 或 Chrome）重新打开本页。</p></div>
 <div class="tabs" role="tablist" aria-label="Blu-ray BOX与DVD-BOX的切换">
 <button class="tab" id="tab-bd" role="tab" aria-selected="true" aria-controls="panel-bd" type="button">Blu-ray BOX<span class="tab-price">定价 25,245日元</span></button>
 <button class="tab" id="tab-dvd" role="tab" aria-selected="false" aria-controls="panel-dvd" type="button" tabindex="-1">DVD-BOX<span class="tab-price">定价 20,790日元</span></button>
@@ -302,11 +319,19 @@ fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/dfkl-zh')
 <tr class="fwdrow best">
 <td class="cell-shop"><span class="shop">Rakuten Books</span><div class="detail">普通版</div><div class="shoplink"><a href="https://books.rakuten.co.jp/rb/18816035/" target="_blank" rel="noopener">商品页面 →</a></div></td><td><span class="price">16,216<small>日元</small></span></td><td class="detail cell-memo"><span>22%OFF</span><span>免运费</span><span>147积分</span></td></tr>
 <tr>
+<td class="cell-shop"><span class="shop">Popcal Yahoo! Store</span><div class="shoplink"><a href="https://store.shopping.yahoo.co.jp/starclub/tced-8874.html" target="_blank" rel="noopener">商品页面 →</a></div></td><td><span class="price">16,382<small>日元</small></span></td><td class="detail cell-memo"><span>运费980日元（东京都）。601积分（4%）</span></td></tr>
+<tr>
 <td class="cell-shop"><span class="shop">Seven Net Shopping</span><div class="shoplink"><a href="https://7net.omni7.jp/detail/1421549121.html" target="_blank" rel="noopener">商品页面 →</a></div></td><td><span class="price">16,632<small>日元</small></span></td><td class="detail cell-memo"><span>20%OFF。在7-Eleven取货免运费。nanaco积分75积分</span></td></tr>
 <tr>
 <td class="cell-shop"><span class="shop">Amazon.co.jp</span><div class="detail">普通版</div><div class="shoplink"><a href="https://amzn.asia/d/0eTOF7NB" target="_blank" rel="noopener">商品页面 →</a></div></td><td><span class="price">16,724<small>日元</small></span></td><td class="detail cell-memo"><span>-20%</span><span>167积分（1%）</span><span>Prime适用／预约商品价格保证适用</span></td></tr>
 <tr>
+<td class="cell-shop"><span class="shop">Guruguru Kingdom Nigokan Yahoo! Store</span><div class="shoplink"><a href="https://store.shopping.yahoo.co.jp/ggking/tced-8874.html" target="_blank" rel="noopener">商品页面 →</a></div></td><td><span class="price">16,798<small>日元</small></span></td><td class="detail cell-memo"><span>运费618日元。616积分（4%）</span></td></tr>
+<tr>
+<td class="cell-shop"><span class="shop">Guruguru Kingdom Yahoo! Store</span><div class="shoplink"><a href="https://store.shopping.yahoo.co.jp/guruguru/tced-8874.html" target="_blank" rel="noopener">商品页面 →</a></div></td><td><span class="price">17,006<small>日元</small></span></td><td class="detail cell-memo"><span>运费308日元。625积分（4%）</span></td></tr>
+<tr>
 <td class="cell-shop"><span class="shop">Joshin</span><div class="shoplink"><a href="https://joshinweb.jp/dp/4571519946128.html" target="_blank" rel="noopener">商品页面 →</a></div></td><td><span class="price">17,047<small>日元</small></span></td><td class="detail cell-memo"><span>会员网购价。免运费。相当于170积分</span></td></tr>
+<tr>
+<td class="cell-shop"><span class="shop">Guruguru Kingdom DS Yahoo! Store</span><div class="shoplink"><a href="https://store.shopping.yahoo.co.jp/dss/tced-8874.html" target="_blank" rel="noopener">商品页面 →</a></div></td><td><span class="price">17,213<small>日元</small></span></td><td class="detail cell-memo"><span>免运费。633积分（4%）</span></td></tr>
 <tr>
 <td class="cell-shop"><span class="shop">Happinet Online Yahoo! Store</span><div class="shoplink"><a href="https://store.shopping.yahoo.co.jp/esdigital/11053609.html" target="_blank" rel="noopener">商品页面 →</a></div></td><td><span class="price">17,255<small>日元</small></span></td><td class="detail cell-memo"><span>发售日后配送</span></td></tr>
 <tr class="okrow">
@@ -319,12 +344,16 @@ fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/dfkl-zh')
 <td class="cell-shop"><span class="shop">ABC Mikke</span><div class="detail">ABC官方网购／商品代码 W0006640</div><div class="shoplink"><a href="https://shop.asahi.co.jp/category/ABC_KISSATO/W0006640.html" target="_blank" rel="noopener">商品页面 →</a></div></td><td><span class="price">17,672<small>日元</small></span></td><td class="detail cell-memo"><span>15%OFF</span><span>运费由ABC Mikke承担</span></td></tr>
 <tr>
 <td class="cell-shop"><span class="shop">Guruguru Kingdom FS</span><div class="detail">Rakuten Ichiba</div><div class="shoplink"><a href="https://item.rakuten.co.jp/mifsoft/tced-8874/" target="_blank" rel="noopener">商品页面 →</a></div></td><td><span class="price">17,838<small>日元</small></span></td><td class="detail cell-memo"><span>发售日后配送</span></td></tr>
+<tr>
+<td class="cell-shop"><span class="shop">Joshin Web CDDVD Yahoo! Store</span><div class="shoplink"><a href="https://store.shopping.yahoo.co.jp/joshin-cddvd/4571519946128.html" target="_blank" rel="noopener">商品页面 →</a></div></td><td><span class="price">17,879<small>日元</small></span></td><td class="detail cell-memo"><span>免运费。657积分（4%）</span></td></tr>
 <tr class="okrow">
 <td class="cell-shop"><span class="shop">CDJapan</span><div class="shoplink"><a href="https://www.cdjapan.co.jp/product/TCED-8874" target="_blank" rel="noopener">商品页面 →</a></div></td><td><span class="price">18,900<small>日元</small></span></td><td class="detail cell-memo"><span>面向海外的价格（不含税）</span><span>可寄送至海外</span></td></tr>
 <tr>
 <td class="cell-shop"><span class="shop">Neowing Yahoo! Store</span><div class="shoplink"><a href="https://store.shopping.yahoo.co.jp/neowing/tced-8874.html" target="_blank" rel="noopener">商品页面 →</a></div></td><td><span class="price">19,126<small>日元</small></span></td><td class="detail cell-memo"><span>免运费</span></td></tr>
 <tr class="fwdrow bonus">
 <td class="cell-shop"><span class="shop">Rakuten Books</span><div class="detail">附特典版（明信片）</div><div class="shoplink"><a href="https://books.rakuten.co.jp/rb/18816679/" target="_blank" rel="noopener">商品页面 →</a></div></td><td><span class="price">19,750<small>日元</small></span></td><td class="detail cell-memo"><span>附先到先得特典明信片</span><span>图案：黑白，站立双人合影</span><span>免运费</span><span>179积分</span></td></tr>
+<tr>
+<td class="cell-shop"><span class="shop">Surprise Flower Yahoo! Store</span><div class="shoplink"><a href="https://store.shopping.yahoo.co.jp/surprise-flower/tced-8874.html" target="_blank" rel="noopener">商品页面 →</a></div></td><td><span class="price">19,751<small>日元</small></span></td><td class="detail cell-memo"><span>免运费。725积分（4%）</span></td></tr>
 <tr class="bonus">
 <td class="cell-shop"><span class="shop">Amazon.co.jp</span><div class="detail">附特典版（明信片）</div><div class="shoplink"><a href="https://amzn.asia/d/0a5S3J7b" target="_blank" rel="noopener">商品页面 →</a></div></td><td><span class="price">20,790<small>日元</small></span></td><td class="detail cell-memo"><span>附明信片</span><span>图案：彩色，坐在椅子上的双人合影</span></td></tr>
 <tr class="bonus">
@@ -333,6 +362,16 @@ fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/dfkl-zh')
 <td class="cell-shop"><span class="shop">Neowing</span><div class="shoplink"><a href="https://www.neowing.co.jp/product/TCED-8874" target="_blank" rel="noopener">商品页面 →</a></div></td><td><span class="price">20,790<small>日元</small></span></td><td class="detail cell-memo"><span>10%积分（2,079积分）。免运费</span></td></tr>
 <tr class="fwdrow">
 <td class="cell-shop"><span class="shop">Tower Records Online</span><div class="shoplink"><a href="https://tower.jp/item/8172622" target="_blank" rel="noopener">商品页面 →</a></div></td><td><span class="price">20,790<small>日元</small></span></td><td class="detail cell-memo"><span>返还189积分</span></td></tr>
+<tr>
+<td class="cell-shop"><span class="shop">Surprise Web Yahoo! Store</span><div class="shoplink"><a href="https://store.shopping.yahoo.co.jp/surpriseweb/tced-8874.html" target="_blank" rel="noopener">商品页面 →</a></div></td><td><span class="price">20,790<small>日元</small></span></td><td class="detail cell-memo"><span>免运费。764积分（4%）</span></td></tr>
+<tr>
+<td class="cell-shop"><span class="shop">Felista Gyokkodo Yahoo! Store</span><div class="shoplink"><a href="https://store.shopping.yahoo.co.jp/felista/tced-8874.html" target="_blank" rel="noopener">商品页面 →</a></div></td><td><span class="price">20,790<small>日元</small></span></td><td class="detail cell-memo"><span>免运费。764积分（4%）</span></td></tr>
+<tr>
+<td class="cell-shop"><span class="shop">Tower Records Yahoo! Store</span><div class="shoplink"><a href="https://store.shopping.yahoo.co.jp/tower/8172622.html" target="_blank" rel="noopener">商品页面 →</a></div></td><td><span class="price">20,790<small>日元</small></span></td><td class="detail cell-memo"><span>免运费。764积分（4%）</span></td></tr>
+<tr>
+<td class="cell-shop"><span class="shop">Vanda Records Yahoo! Store</span><div class="shoplink"><a href="https://store.shopping.yahoo.co.jp/vanda/tce-tced-8874.html" target="_blank" rel="noopener">商品页面 →</a></div></td><td><span class="price">20,790<small>日元</small></span></td><td class="detail cell-memo"><span>免运费。764积分（4%）</span></td></tr>
+<tr>
+<td class="cell-shop"><span class="shop">MONO Gyokkodo Yahoo! Store</span><div class="shoplink"><a href="https://store.shopping.yahoo.co.jp/monoichi/tced-8874.html" target="_blank" rel="noopener">商品页面 →</a></div></td><td><span class="price">20,790<small>日元</small></span></td><td class="detail cell-memo"><span>免运费。764积分（4%）</span></td></tr>
 </tbody>
 </table>
 <p class="sec-note">特典明信片的背面，Rakuten Books与Amazon相同。</p>
@@ -402,7 +441,7 @@ tabDvd.addEventListener('keydown',onKey);
 
 <section class="history" aria-labelledby="history">
 <h2 id="history">更新记录</h2>
-<ul>
+<details class="histfold"><summary>展开更新记录（共12条）</summary><ul>
 <li><time datetime="2026-11-16">2026-11-16</time><span>页面已汇总</span></li>
 <li><time datetime="2026-11-16">2026-11-16</time><span>附特典版已加入价格表</span></li>
 <li><time datetime="2026-11-16">2026-11-16</time><span>优惠券·积分备注已修改</span></li>
@@ -413,11 +452,13 @@ tabDvd.addEventListener('keydown',onKey);
 <li><time datetime="2026-11-16">2026-11-16</time><span>“从海外购买”已加入</span></li>
 <li><time datetime="2026-11-16">2026-11-16</time><span>新增了英文版和简体中文版</span></li>
 <li><time datetime="2026-11-17">2026-11-17</time><span>销售店铺为Blu-ray 32家·DVD 17家</span></li>
-</ul>
+<li><time datetime="2026-11-18">2026-11-18</time><span>销售店铺为Blu-ray 32家·DVD 28家</span></li>
+<li><time datetime="2026-11-18">2026-11-18</time><span>添加了应用内浏览器访客提示</span></li>
+</ul></details>
 </section>
 
 <footer>
-<p>价格确认日期：2026-11-17（在各店铺的实际页面／官方页面确认）</p>
+<p>价格确认日期：2026-11-18（在各店铺的实际页面／官方页面确认）</p>
 <p>价格可能会变动。购买前请在各店铺页面确认最新价格与是否有特典。</p>
 </footer>
 

@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>修仲ファンまとめ【非公式】</title>
+<meta property="og:title" content="修仲ファンまとめ【非公式】">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://buna20260101.github.io/shuunaka_SchoolTrip/">
+<meta property="og:description" content="『修学旅行で仲良くないグループに入りました』のファンまとめサイトです">
+<meta name="twitter:card" content="summary">
+
 <style>
 body{margin:0;font-family:sans-serif;color:#333;background:#fff;padding:24px 28px 40px}
 a{color:#2f6f5e}
@@ -79,16 +85,17 @@ var el=document.getElementById('cnt');
 var day=new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Tokyo'});
 var skey='shunaka-cnt-top';
 var counted=false;
+function t(u){var c=new AbortController();setTimeout(function(){c.abort()},5000);return fetch(u,{signal:c.signal});}
 try{counted=localStorage.getItem(skey)===day;}catch(e){}
 function show(d){if(d&&typeof d.value==='number'){el.textContent=d.value}else{fail(1)}}
 function fail(n){ if(n<3){ setTimeout(function(){tryGet(n+1)},3000); } else { el.textContent='―'; } }
 function tryGet(n){
-fetch('https://abacus.jasoncameron.dev/get/buna-shunaka/top')
+t('https://abacus.jasoncameron.dev/get/buna-shunaka/top')
 .then(function(r){return r.json()}).then(show).catch(function(){fail(n)});
 }
 if(counted){ tryGet(0); }
 else{
-fetch('https://abacus.jasoncameron.dev/hit/buna-shunaka/top')
+t('https://abacus.jasoncameron.dev/hit/buna-shunaka/top')
 .then(function(r){return r.json()}).then(function(d){ try{localStorage.setItem(skey,day);}catch(e){} show(d); }).catch(function(){fail(1)});
 }
 })();
